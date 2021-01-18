@@ -1,6 +1,6 @@
 const appProjects = {
     template:`
-        <div>
+        <div style="height: 1000px;">
             {{msg}}
         </div>
     `,
