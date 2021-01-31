@@ -2,6 +2,8 @@ html,
 body {
   height: 100%;
   width: 100%;
+
+  --img-url: url(images/Anton_Porsbjer.jpg);
 }
 
 h1,
@@ -92,6 +94,19 @@ hr {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.cool-border {
+	flex-shrink: 0;
+	margin: 20px;
+	border: calc(8px + 0.2vw) solid transparent;
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	background-size: cover;
+	box-sizing: border-box;
+  box-shadow: 0 0 5px 5px #f9d423;
+  border-radius: 1% 20%;
+	background-image: var(--img-url), linear-gradient(to bottom left, #f83600, #f9d423);
+}
+
 #top-navbar{
   left: 0;
   width: 100vw;
@@ -134,6 +149,11 @@ hr {
     inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5); 
 }
 
+#projects {
+  background-color:#f5f5f5;
+  padding-top: 50px;
+}
+
 #projects span {
   font-size: 22px;
   color: rgb(255, 0, 119)
@@ -145,6 +165,57 @@ hr {
   }
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+
+}
+
+.grid-item img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  overflow: hidden;
+  /*background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);*/
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.image-container:hover .image {
+  opacity: 0;
+}
+
+.image-container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
+
 @media only screen and (max-device-width: 575px) {
   #about p{
     text-align: justify; 
@@ -155,5 +226,22 @@ hr {
   .portrait {
     width: 75%;
     margin-right: auto;
+  }
+
+  #projects p {
+    font-size: 1.2rem;
+  }
+
+  .grid-container {
+    grid-template-columns: auto;
+    padding: 0px;
+  }
+
+  .text {
+    padding: 16px 0px;
+  }
+
+  .text p {
+    font-size: 18px;
   }
 }
