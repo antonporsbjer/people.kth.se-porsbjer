@@ -3,6 +3,8 @@ body {
   height: 100%;
   width: 100%;
 
+  background-color:#f5f5f5;
+
   --img-url: url(images/Anton_Porsbjer.jpg);
 }
 
@@ -183,11 +185,25 @@ hr {
 
 .image {
   opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.image img {
   display: block;
   width: 100%;
   height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
+}
+
+.image div {
+  background-color: rgba(0, 0, 0, 0.835); 
+  padding: 20px;
+}
+
+.image h4 {
+  margin: auto; 
+  color: rgb(255, 255, 255); 
+  text-align: center;
 }
 
 .middle {
