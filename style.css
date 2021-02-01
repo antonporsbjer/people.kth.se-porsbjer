@@ -1,0 +1,263 @@
+html, 
+body {
+  height: 100%;
+  width: 100%;
+
+  background-color:#f5f5f5;
+
+  --img-url: url(images/Anton_Porsbjer.jpg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+/*  font-family: "Montserrat", sans-serif; */
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Abel', sans-serif;
+  font-size: 15vw;
+  color: white;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.1rem;
+}
+
+p {
+  font-size: 1.35rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  color: #0000003b;
+}
+
+.lead {
+  font-size: 1.5rem;
+}
+
+#socials a {
+  color: #fd7e14;
+  text-decoration: none;
+}
+
+#socials a:hover {
+  color: #ffa357;
+}
+
+#socials p {
+  font-size: 42px; 
+  text-align: center;
+}
+
+.menu-btn {
+  border: 0px;
+}
+
+.menu-btn:focus {
+  border: 0px;
+  box-shadow: 0 0 0 0;
+}
+
+.menu-btn:hover {
+  color: rgba(255,255,255,.75);
+}
+
+.main-content {
+  padding-top: 30px;
+  max-width: 1750px;
+}
+
+#splash-screen {
+  background: url(https://picsum.photos/2500?random=1&grayscale&blur=5) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.splash-card{
+  background-color: rgba(255, 255, 255, 0.24);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cool-border {
+	flex-shrink: 0;
+	margin: 20px;
+	border: calc(8px + 0.2vw) solid transparent;
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	background-size: cover;
+	box-sizing: border-box;
+  box-shadow: 0 0 5px 5px #f9d423;
+  border-radius: 1% 20%;
+	background-image: var(--img-url), linear-gradient(to bottom left, #f83600, #f9d423);
+}
+
+#top-navbar{
+  left: 0;
+  width: 100vw;
+  z-index: 2;
+  background: var(--primary-color);
+  height: 50px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
+}
+
+#about p{
+  font-size: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.portrait {
+  width: 85%;
+  border-radius: 50%;
+  /* margin-right: auto; */
+  margin-left: auto;
+  display: block;
+  padding: 3px;
+}
+
+.parallax {
+  /* Set a specific height */
+  min-height: 225px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  box-shadow: 
+    inset 0px 11px 8px -10px rgba(0, 0, 0, 0.5),
+    inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5); 
+}
+
+#projects {
+  background-color:#f5f5f5;
+  padding-top: 50px;
+}
+
+#projects span {
+  font-size: 22px;
+  color: rgb(255, 0, 119)
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  padding: 10px;
+
+}
+
+.grid-item img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  overflow: hidden;
+  /*background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);*/
+}
+
+.image {
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image div {
+  background-color: rgba(0, 0, 0, 0.835); 
+  padding: 20px;
+}
+
+.image h4 {
+  margin: auto; 
+  color: rgb(255, 255, 255); 
+  text-align: center;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.image-container:hover .image {
+  opacity: 0;
+}
+
+.image-container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
+
+@media only screen and (max-device-width: 575px) {
+  #about p{
+    text-align: justify; 
+    text-justify: inter-word;
+    padding: 20px;
+  }
+  
+  .portrait {
+    width: 75%;
+    margin-right: auto;
+  }
+
+  #projects p {
+    font-size: 1.2rem;
+  }
+
+  .grid-container {
+    grid-template-columns: auto;
+    padding: 0px;
+  }
+
+  .text {
+    padding: 16px 0px;
+  }
+
+  .text p {
+    font-size: 18px;
+  }
+}
