@@ -2,10 +2,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-
   background-color:#f5f5f5;
-
-  --img-url: url(images/Anton_Porsbjer.jpg);
 }
 
 h1,
@@ -35,8 +32,12 @@ h3 {
   font-size: 2.1rem;
 }
 
+h4 {
+  font-size: 1.5vw;
+}
+
 p {
-  font-size: 1.35rem;
+  font-size: 1.35vw;
 }
 
 a {
@@ -51,13 +52,37 @@ hr {
   font-size: 1.5rem;
 }
 
+#splash-screen h1 {
+  /* text-shadow: 2px 2px 1px black; */
+}
+
+#splash-screen p{
+  margin: auto;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+  font-weight: 350;
+}
+
+#splash-screen a {
+  color: rgb(255, 0, 45);
+  font-weight: 400;
+  text-shadow: 1px 1px 5px black;
+}
+
+#splash-screen a:hover {
+  color: rgb(255, 112, 112);
+  /*text-shadow: 1px 1px 10px black;*/
+}
+
 #socials a {
-  color: #fd7e14;
+  color: rgb(255, 0, 45);
   text-decoration: none;
+  text-shadow: 1px 1px 5px black;
 }
 
 #socials a:hover {
-  color: #ffa357;
+  color: rgb(255, 112, 112);
+  /*text-shadow: 1px 1px 10px black;*/
 }
 
 #socials p {
@@ -78,13 +103,8 @@ hr {
   color: rgba(255,255,255,.75);
 }
 
-.main-content {
-  padding-top: 30px;
-  max-width: 1750px;
-}
-
 #splash-screen {
-  background: url(https://picsum.photos/2500?random=1&grayscale&blur=5) no-repeat center center fixed; 
+  background: linear-gradient(rgba(53, 0, 104, 0.5), rgba(132, 0, 255, 0.02)), url(images/bg_sunset_woods.JPG) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -121,10 +141,20 @@ hr {
   box-shadow: 0 4px 2px -2px rgba(0,0,0,.2);
 }
 
+#about,
+#projects {
+  padding-top: 60px;
+}
+
 #about p{
-  font-size: 20px;
+  font-size: 1.3vw;
   margin-top: auto;
   margin-bottom: auto;
+}
+
+#about a{
+  font-size: 2.5vw;
+  color: black;
 }
 
 .portrait {
@@ -138,7 +168,7 @@ hr {
 
 .parallax {
   /* Set a specific height */
-  min-height: 225px; 
+  min-height: 350px; 
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -151,21 +181,10 @@ hr {
     inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5); 
 }
 
-#projects {
-  background-color:#f5f5f5;
-  padding-top: 50px;
-}
-
 #projects span {
-  font-size: 22px;
-  color: rgb(255, 0, 119)
+  
 }
 
-@media only screen and (max-device-width: 1366px) {
-  .parallax {
-    background-attachment: scroll;
-  }
-}
 
 .grid-container {
   display: grid;
@@ -226,10 +245,68 @@ hr {
 }
 
 .text {
-  font-size: 16px;
-  padding: 16px 32px;
+  padding: 10px 10px;
 }
 
+.text h3 {
+  font-size: 1.8vw;
+  margin-bottom: 1%;
+}
+
+.text span {
+  font-size: 1.3vw;
+  color: rgb(255, 0, 119);
+}
+
+.text p {
+  font-size: 1.1vw;
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+@media only screen and (max-device-width: 1000px) {
+  .grid-container {
+    grid-template-columns: auto;
+    padding: 0px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  #about p{
+    font-size: 16px;
+  }
+
+  #about a{
+    font-size: 32px;
+  }
+
+  #projects p {
+    font-size: 2.35vw;
+  }
+
+  .text {
+    padding: 10px 32px;
+  }
+  
+  .text h3 {
+    font-size: 40px;
+    margin-bottom: 2%;
+  }
+  
+  .text span {
+    font-size: 22px;
+  }
+  
+  .text p {
+    font-size: 19px;
+  }
+}
 
 
 @media only screen and (max-device-width: 575px) {
@@ -238,14 +315,14 @@ hr {
     text-justify: inter-word;
     padding: 20px;
   }
+
+  #projects p {
+    font-size: 4.55vw;
+  }
   
   .portrait {
     width: 75%;
     margin-right: auto;
-  }
-
-  #projects p {
-    font-size: 1.2rem;
   }
 
   .grid-container {
@@ -253,11 +330,29 @@ hr {
     padding: 0px;
   }
 
-  .text {
-    padding: 16px 0px;
+
+  #about p{
+    font-size: 16px;
   }
 
+  #about a{
+    font-size: 32px;
+  }
+
+  .text {
+    padding: 10px 0px;
+  }
+  
+  .text h3 {
+    font-size: 6.8vw;
+    margin-bottom: 2%;
+  }
+  
+  .text span {
+    font-size: 4.5vw;
+  }
+  
   .text p {
-    font-size: 18px;
+    font-size: 4vw;
   }
 }
