@@ -1,0 +1,109 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>DH2323 Project</title>
+  <meta name="description" content="Jelly Blobbers Project">
+  <meta name="author" content="Anton Porsbjer">
+    
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css?v=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <h2 style="color: deeppink;">Jelly Blobbers</h2>
+            </div>
+
+            <div class="left" style="background-color:#1a1a1a;"></div>
+            <div class="middle" style="background-color:#bbbbbb;">
+
+                <div class="blogentry" style="background-color:#ddd;">
+                    <div class="image">
+
+                        <!-- Bootstrap: Carousel -->
+                        <div id="carouselControls00" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Images/blobbers1.gif" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>still
+                    <div class="texts">
+                        <p><b>Trying a different approach</b></p>
+                        <p>We have implemented a first version of a jelly simulation by following a tutorial and tried it out on some basic shapes.
+                            They are not quite behaving as we want though so we will have to do some tweaking to see if we can get it to work out.
+                            As seen in the gif, the sphere is wobbling nicely while the cylinder seems quite stiff.
+                        </p> 
+                    </div>
+                </div>
+
+                <div class="blogentry" style="background-color:#ddd;">
+                    <div class="image">
+
+                        <!-- Bootstrap: Carousel -->
+                        <div id="carouselControls00" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Images/Cube_mesh.gif" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="texts">
+                        <p><b>Generating and manipulating a cube mesh from vertices.</b></p>
+                        <p> We have started exploring the possibility of manipulating a cube mesh using a spring-damper system. 
+                            Today we have managed to create a cube mesh using a Vector3 array of vertices and an integer array of 
+                            points describing triangles (polygons). Since in Unity every vertex in a cube (8 vertices) consists of 
+                            3 points (one for each face-normal), we had to find which three points correspond to which indexes in 
+                            the vertex array. Last but not least, we also tried manipulating one of two of the cubes vertices using 
+                            a sinus function updating both the cube mesh and the mesh-collider to see if it worked as we intended.
+                            Which it did! 🎉
+                        </p> 
+                    </div>
+                </div>
+
+                <div class="blogentry" style="background-color:#ddd;">
+                    <div class="image">
+
+                        <!-- Bootstrap: Carousel -->
+                        <div id="carouselControls00" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Images/orange-jelly-cubes.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="texts">
+                        <p><b>Jell-O!</b></p>
+                        <p>We will hopefully simulate some fancy bouncy jelly cubes. We are quite worried to say the least.</p> 
+                    </div>
+                </div>
+
+        </div>
+        <div class="right"  style="background-color:#1a1a1a;"></div>
+
+        <div class="footer" style="background-color:#2a2a2a;">
+            <p style="color: deeppink; margin: 0px;">Anton Porsbjer & Jenna Smulter</p>
+            <p style="color: deeppink; margin: 0px;">porsbjer@kth.se | smulter@kth.se</p>
+        </div>
+    </div>    
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
