@@ -267,17 +267,17 @@ hr {
 }
 
 .card-text h3 {
-  font-size: 1.8vw;
+  font-size: 27px;
   margin-bottom: 1%;
 }
 
 .card-text span {
-  font-size: 1.3vw;
+  font-size: 22px;
   color: rgb(255, 0, 119);
 }
 
 .card-text p {
-  font-size: 1.1vw;
+  font-size: 17px;
 }
 
 #foot p{
