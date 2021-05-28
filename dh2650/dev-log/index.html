@@ -31,10 +31,10 @@
                     <div class="image">
 
                         <!-- Bootstrap: Carousel -->
-                        <div id="carouselControls06" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <div id="carouselControls07" class="carousel slide" data-ride="carousel" data-interval="false">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="Images/E7/Sable_Tiny.gif" class="d-block w-100" alt="...">
+                                    <img src="Images/Sable_Tiny.gif" class="d-block w-100" alt="...">
                                 </div>
                             </div>
                         </div>
@@ -43,16 +43,18 @@
                     <div class="texts">
                         <h3><b>So many hotfixes</b></h3>
                         <p>
-                            The past few days have been a lot of work. Inorder to make all of the different parts of the game working as
+                            The past few days have been a lot of work. In order to make all of the different parts of the game working as
                             intended, sorting out different bugs, and making it come together as a complete experience the way we envisioned 
-                            it a lot of hours had to be put into it. For me and Jenna, having a bit more experience with Unity and building 
-                            project in Unity this ment that we had to make lots of small tweeks changes, updating prefabs, and writing new 
-                            code. I even had to push a new building to the website shortly befor our demo due to a bug with the collision
-                            making it impossible to get past a sertein point of the levle. But we also had a lot of fun during the last crunch
-                            time (maybe the most fun we'we hade during the entire project), Alex is aperantly very good at breaking games and 
-                            we all had a big laugth watching him try to break our game and we even found some speed-running strategies.
+                            it, a lot of hours had to be put into it. For me and Jenna, having a bit more experience with Unity and building 
+                            project in Unity this meant that we had to make lots of small tweaks and changes, updating prefabs, and writing new 
+                            code. I even had to push a new build of the game to the website shortly before our demo due to a bug with the collision
+                            making it impossible to get past a certain point of the level.
+                            <br><br>
+                            But we also had a lot of fun during the last crunch
+                            time (maybe the most fun we've hade during the entire project), Alex is apparently very good at breaking games and 
+                            we all had a big laugh watching him try to break our game and we even found some speed-running strategies.
                             <br></br>
-                            Finally I think the final presentation and demo turned out great and am very proud of what we have accomplished.
+                            Finally I think the final presentation and demo turned out great and I am very proud of what we have accomplished. 🎉
                             <br></br>
                             Check out the game <a href="https://dh2650-game-design-group1.github.io/index.html">here!</a>
                         </p> 
@@ -61,65 +63,100 @@
 
                 <div class="blogentry" style="background-color:#ddd;">
                     <div class="image">
-
                         <!-- Bootstrap: Carousel -->
-                        <div id="carouselControls05" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <div id="carouselControls06" class="carousel slide" data-ride="carousel" data-interval="false">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="Images/E" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="Images/E" class="d-block w-100" alt="...">
+                                    <img src="Images/slidin-puzzle.png" class="d-block w-100" alt="...">
                                 </div>
                             </div>
-                            <a class="carousel-control-prev" href="#carouselControls05" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselControls05" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
                         </div>
-
                     </div>
+
                     <div class="texts">
                         <h3><b>Setting up the sliding puzzles and puzzle doors</b></h3>
                         <p>
                             The game is really starting to come together, but as was mentioned during the the last status update the sliding-puzzles
-                            really needed some work since it is one of our core game mechanics. So that is what i have been working on lately, i have
-                            with e little help from Jenna been able to get the tileset she created in to the puzzle and having it move correctly with in
-                            the custom matrix system i built for the sliding-puzzles. I have also setup puzzle-doors thought out the level and the puzzle
-                            to make the game a bit more challenging and complex.
+                            really needed some work since it is one of our core game mechanics. So that is what I have been working on lately, I have
+                            with e little help from Jenna been able to get the tileset she created in to the puzzle and having it move correctly within
+                            the custom matrix system I built for the sliding-puzzles. I have also setup puzzle-doors throughout the level and the puzzle
+                            to make the game a bit more challenging and complex. And I have updated the camera for the puzzle and making it so that the frame around the puzzle
+                            is visible when the puzzle camera is active.
                         </p> 
                     </div>
                 </div>
 
                 <div class="blogentry" style="background-color:#ddd;">
                     <div class="image">
+                        <!-- Bootstrap: Carousel -->
+                        <div id="carouselControls05" class="carousel slide" data-ride="carousel" data-interval="false">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Images/Parallax.gif" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="texts">
+                        <h3><b>Parallax effect and a new new camera system</b></h3>
+                        <p>
+                            We decided on having a parallax effect on the background and foreground objects. This meant I had to completely
+                            redo the camera system we aready had in place since it was implemented using an orthographic camera, this means
+                            that it does not account for the Z-position of objects meaning that all objecs rendered by the camera appears to
+                            be at the same distance from the camera. In order to get the parallax effect with objects moving in different speed
+                            relative to the camera position we had to change to a perspective camera. This also means that we have to remove
+                            the individual room dividers since this won't work with a perspective camera. I also had to learn a bit about the 
+                            <a href="https://docs.unity3d.com/Manual/class-SpriteRenderer.html">Unity Sprite Render</a> and sorting layers.
+                            In order to get the sprites to render correctly you cannot just edit the Z-position of the sprites you also have to
+                            tell the rendering pipeline in what order to render the sprites in. I have updated every object in the scene to put
+                            them on the correct sprite layer.
+                            <br><br>
+                        </p> 
+                    </div>
+                </div>
+
+                <div class="blogentry" style="background-color:#ddd;">
+                    <div class="image">
                         <!-- Bootstrap: Carousel -->
                         <div id="carouselControls04" class="carousel slide" data-ride="carousel" data-interval="false">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="Images/E5/Parallax.gif" class="d-block w-100" alt="...">
+                                    <img src="Images/bg-art.png" class="d-block w-100" alt="...">
                                 </div>
                             </div>
                         </div>
-
                     </div>
+
                     <div class="texts">
-                        <h3><b>Parallax effect and a new new camera system</b></h3>
+                        <h3><b>Background objects and music and more</b></h3>
                         <p>
-                            We desided on having a parallax effect on the background and foreground objects. This maent I had to complete
-                            redo the camera system we aready had in place since it was implemented using an orthographic camera, this means
-                            that it dose not acount for the Z-position of objects mening that all objecs renderd by the camera aperars to
-                            be at the same distance from the camera. Inorder to get the parallax effect with objecs moving in difrent speed
-                            relative to the camera position we had to change to a perspective camera. This also means that we have to remove
-                            the individual room dividers sins this wont work with a perspective camera. I also had to lern a bit about the 
-                            <a href="https://docs.unity3d.com/Manual/class-SpriteRenderer.html">Unity Sprite Render</a> and sorting layers,
-                            inorder to get the sprites to render correctly you canot just edit the Z-position of the sprites you also have to
-                            tell the rendering pipeline in what order to render the sprites in.
+                            Jenna has created a background and background objects that I have added to the main scene. I also added gems and health hearts Malin made to the scene. 
+                            We also decided on background music for the game which I added to the main scene. 
+                            <br><br>
+                            Jenna and I also tweaked the movement of the character. We updated the movement speed, acceleration and deceleration,
+                            and tweaked the jump to make it more accurate. We spent quite some time on this. The character movement used the drag parameter of the rigidbody
+                            for both jumping and deceleration. The character was sliding a lot before coming to a stop, which made it hard to control the character, especially
+                            on floating platforms. But if we increased the drag it also affected the jump, making her barely jump at all. We wrote our own deceleration in the movement script, 
+                            and encountered some amusing bugs along the way before we got it all to work. For example, you could gain a lot speed by quickly running back and forth.
+                            
+                        </p> 
+                    </div>
+                </div>
+
+                <div class="blogentry" style="background-color:#ddd;">
+
+                    <div class="texts">
+                        <h3><b>A little bit of this and that</b></h3>
+                        <p>
+                            I have been busy maintaining different parts of the game. For example, Malin has made a new movement system 
+                            for the characters which I have integrated into to our main game scene. I've also added my new camera system to the main scene.
+                            <br><br>
+                            I have worked on the sliding puzzle, adding triggers for entering and exiting the puzzle.
+                            <br><br>
+                            Jenna has created a tileset which I have also integrated into the main scene by creating a tile palette in Unity. 
+                            I also continuously tweaked Alex's level design to make the proportions and feel better to move through, and updateing
+                            the tiles to the new tileset.
                         </p> 
                     </div>
                 </div>
@@ -131,10 +168,10 @@
                         <div id="carouselControls03" class="carousel slide" data-ride="carousel" data-interval="false">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="Images/E4/camra-sys.png" class="d-block w-100" alt="...">
+                                    <img src="Images/camra-sys.png" class="d-block w-100" alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="Images/E4/New_cam.gif" class="d-block w-100" alt="...">
+                                    <img src="Images/New_cam.gif" class="d-block w-100" alt="...">
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselControls03" role="button" data-slide="prev">
@@ -167,10 +204,10 @@
                         <div id="carouselControls02" class="carousel slide" data-ride="carousel" data-interval="false">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="Images/E3/level-layout.png" class="d-block w-100" alt="...">
+                                    <img src="Images/level-layout.png" class="d-block w-100" alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="Images/E3/custom-sprites.png" class="d-block w-100" alt="...">
+                                    <img src="Images/custom-sprites.png" class="d-block w-100" alt="...">
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselControls02" role="button" data-slide="prev">
@@ -193,7 +230,12 @@
                             layout within Unity and trying to figure out if we should go with a tile-based 2D sprite approach
                             or a 2.5D environment. After some testing and consulting with the other group members, we have desided 
                             on going with the 2D sprite-based approach. I have laid out the level based Alex level design 
-                            using a free-to-use tilemap and also testing to create a couple of tiles myself to moderate success.
+                            using a free-to-use tilemap and also testing to create a couple of tiles myself to moderate success.<br><br>
+                            I have also continued working on the sliding puzzles. The tiles are now movable with the arrow keys, and the 
+                            player can zoom out to see the whole puzzle by pressing the M key. I also made the player move with the puzzle
+                            rooms when the rooms are moved (before they character would stay at its position and possibly get stuck in a wall
+                            or fall down.) I also made some updates to the puzzle camera, and I made the camera go back to the main camera
+                            I the player moves away from the puzze.
                         </p> 
                     </div>
                 </div>
@@ -206,10 +248,10 @@
                         <div id="carouselControls01" class="carousel slide" data-ride="carousel" data-interval="false">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="Images/E2/sliging-puzzle1.png" class="d-block w-100" alt="...">
+                                    <img src="Images/sliging-puzzle1.png" class="d-block w-100" alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="Images/E2/unity-setup.png" class="d-block w-100" alt="...">
+                                    <img src="Images/unity-setup.png" class="d-block w-100" alt="...">
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselControls01" role="button" data-slide="prev">
@@ -242,10 +284,10 @@
                         <div id="carouselControls00" class="carousel slide" data-ride="carousel" data-interval="false">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="Images/E1/project-org.png" class="d-block w-100" alt="...">
+                                    <img src="Images/project-org.png" class="d-block w-100" alt="...">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="Images/E1/project-board.png" class="d-block w-100" alt="...">
+                                    <img src="Images/project-board.png" class="d-block w-100" alt="...">
                                 </div>
                             </div>
                             <a class="carousel-control-prev" href="#carouselControls00" role="button" data-slide="prev">
