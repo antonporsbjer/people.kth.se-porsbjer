@@ -31,7 +31,7 @@
             </div>    
             <div id="welcome-text" class="row">
                 <div class="col">
-                    <p class="lead position-absolute top-50 start-50 translate-middle">
+                    <p class="lead position-absolute top-50 start-50 translate-middle lh-sm">
                         Welcome to my personal website. 
                         I created this website to show a bit of who I am and what I have created while studying at KTH.
                         <br>
@@ -77,266 +77,233 @@
                     </div>
                 </nav> 
                 
-                <div id="about">                    
-                    <div class="container-xl" style="margin-bottom: 25px; min-height: 650px">
-                        <h2> About Me </h2>
-                        <p>A small introduction about my self</p>
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <img class="portrait" src="images/Anton_Porsbjer.jpg">
-                            </div>
-                            <div class="col-lg-8 about-text">
-                                <p>
-                                    My name is Anton Porsbjer and I am a computer science and engineering student at KTH Royal Institute of Technology from Stockholm, Sweden.
-                                    I have a great passion for developing video games, fun software and web applications.
-                                    I am currently pursuing my master's degree in computer science with a specialization in computer graphics and interaction.
-                                    <br>
-                                    <br>
-                                    <a class="fab fa-github" href="https://github.com/antonporsbjer" target="_blank"></a>
-                                    <a class="fab fa-linkedin" href="https://se.linkedin.com/in/anton-porsbjer" target="_blank"></a>
-                                    <a class="fas fa-envelope" href="mailto:porsbjer@kth.se" target="_blank"></a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                <div id="about" class="container-xl" style="min-height: 600px;">                    
+                    <h2 class="text-center mb-0"> About Me </h2>
+                    <p class="text-center lead pt-0 mx-5">
+                        A small introduction about my self.
+                    </p>
                     
-                    <div class="parallax" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.76)), url(images/keyboard1.JPG);"></div>
-                </div>
-
-                <div id="projects">
-                    <div class="container mb-5">
-                        <h2> Projects </h2>
-                        <div class="row">
-                            <div class="col">
-                                <p style="text-align: center;">
-                                    Here is a selection of the projects that I have been working on throughout my studies.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div id="project-portfolio" class="grid-container">
-                            <div class="grid-item  position-relative">
-                                <div class="ratio ratio-4x3 image-container">
-                                    <div class="image">
-                                        <div class="position-absolute bottom-0 start-50 translate-middle-x align-middle w-100">
-                                            <h4 class="align-middle"> Sabel and Tiny </h3>
-                                        </div>
-                                        <img class="img-fluid" src="images/Sabel_Tiny_screenshot.png" style="height: 100%;">
-                                    </div>
-                                    
-                                    <div class="middle">
-                                        <div class="card-text">   
-                                            <h3> Sabel and Tiny </h3>
-                                            <span>
-                                                Unity | C#
-                                            </span>
-                                            <p>
-                                                Sabel and Tiny is a 2D side scroller puzzle platform game. We created it as a part of a course in
-                                                game design in which we went through the process of creating games, from idea to 
-                                                specification to prototyping and pitching the game. The prototype was made using the Unity 
-                                                game engine. For this project, I assumed the role of project lead and was responsible for 
-                                                keeping track of all aspects of the game, making sure everything is working correctly
-                                                together and that the game is playable. I was also responsible for implementing some of the
-                                                game mechanics, one example is a mechanic where the player is able to control the the game world similar to a sliding puzzle.
-                                                <a class="nav-link" style="text-align: center;" href="https://sabeltiny.github.io/" target="_blank">The game's website</a>
-                                            </p>                                 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="grid-item  position-relative">
-                                <div class="ratio ratio-4x3 image-container">
-                                    <div class="image">
-                                        <div class="position-absolute bottom-0 start-50 translate-middle-x align-middle w-100">
-                                            <h4 class="align-middle"> Eye in the Sky </h3>
-                                        </div>
-                                        <img class="img-fluid" src="images/EitS_screenshot.jpg" style="height: 100%;">
-                                    </div>
-                                    
-                                    <div class="middle">
-                                        <div class="card-text">   
-                                            <h3> Eye in the Sky </h3>
-                                            <span>
-                                                Unity | C# | Mirror
-                                            </span>
-                                            <p>
-                                                Eye in the Sky is an asymmetric network multiplayer cross-platform game built in the Unity 
-                                                game engine. The goal of the project was creating a game using different type of technologies such as motion 
-                                                controls, asymmetric gameplay and we also experimented with AR.
-                                                In this project my responsibilites were gameplay programming, implementing the network 
-                                                connectivity between clients and the server, and android development.
-                                                <a class="nav-link" style="text-align: center;" href="https://adelinaand.github.io/EyeInTheSky" target="_blank">The game's website</a>
-                                            </p>                                 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="grid-item  position-relative">
-                                <div class="ratio ratio-4x3 image-container">
-                                    <div class="image">
-                                        <div class="position-absolute bottom-0 start-50 translate-middle-x align-middle w-100">
-                                            <h4 class="align-middle"> Bunny's Blobbers </h3>
-                                        </div>
-                                        <img class="img-fluid" src="images/Jelly_screenshot.png" style="height: 100%;">
-                                    </div>
-                                    
-                                    <div class="middle">
-                                        <div class="card-text">   
-                                            <h3> Bunny's Blobbers </h3>
-                                            <span>
-                                                Unity | C# | NVIDIA FleX
-                                            </span>
-                                            <p>
-                                                As part of a course in models and simulation, we created a game using the Unity game engine and 
-                                                the NVIDIA FleX SDK. The game itself is pretty simple, you are a bunny trying to catch small bunnies made of 
-                                                jelly and other fun materials in your bucket. The goal of the project was to use NVIDIA FleX to learn about 
-                                                simulating the physics and behaviors of different materials.
-                                                <a class="nav-link" style="text-align: center;" href="https://people.kth.se/~porsbjer/JellyBlobbers/" target="_blank">Check out the devlog</a>
-                                            </p>                                 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="grid-item">
-                                <div class="ratio ratio-4x3 image-container">
-                                    <div class="image">
-                                        <div class="position-absolute bottom-0 start-50 translate-middle-x align-middle w-100">
-                                            <h4 class="align-middle"> Overwatch Tournament Manager </h3>
-                                        </div>
-                                        <img class="img-fluid" src="images/OTM_screenshot.png" style="height: 100%;">
-                                    </div>
-                                    <div class="middle">
-                                        <div class="card-text">   
-                                            <h3> Overwatch Tournament Manager </h3>
-                                            <span>
-                                                Vue.js | HTML | CSS | JavaScript
-                                            </span>
-                                            <p>
-                                                Overwatch Tournament Manager is a web application for creating Overwatch tournaments, 
-                                                created in Vue.js using an unofficial Overwatch API.
-                                                I worked with creating vue-components for the different aspects of the application and API calls.
-                                                I also spent some time on CSS styling.
-                                                <a class="nav-link" style="text-align: center;" href="https://overwatch-tournament-manager.firebaseapp.com" target="_blank">Try it out</a>
-                                            </p>                                 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="grid-item">
-                                <div class="ratio ratio-4x3 image-container">
-                                    <div class="image">
-                                        <div class="position-absolute bottom-0 start-50 translate-middle-x align-middle w-100">
-                                            <h4 class="align-middle"> Parklife STHLM </h3>
-                                        </div>
-                                        <img class="img-fluid" src="images/Parklife_screenshot.png" style="height: 100%;">
-                                    </div>
-                                    <div class="middle">
-                                        <div class="card-text">   
-                                            <h3> Parklife STHLM </h3>
-                                            <span>
-                                                Figma
-                                            </span>
-                                            <p>
-                                                Parklife STHLM is a prototype of a smartphone application for finding and learning about parks and green areas in Stockholm created using the design and prototyping tool Figma.
-                                                <a class="nav-link" style="text-align: center;" href="https://www.youtube.com/watch?v=K-IuHGTXG5Y" target="_blank">See a video</a>
-                                            </p>                               
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="grid-item">
-                                <div class="ratio ratio-4x3 image-container">
-                                    <div class="image">
-                                        <div class="position-absolute bottom-0 start-50 translate-middle-x align-middle w-100">
-                                            <h4 class="align-middle"> Cat shelter companion application </h3>
-                                        </div>
-                                        <img class="img-fluid" src="images/Cat_screenshot.png" style="height: 100%;">
-                                    </div>
-                                    <div class="middle">
-                                        <div class="card-text">   
-                                            <h3> Cat shelter companion application </h3>
-                                            <span>
-                                                Figma
-                                            </span>
-                                            <p>
-                                                A prototype of a tablet application for use in cat shelters, designed in Figma as a UX project.
-                                                In this project we traveled to cat shelters in Stockholm and performed user studies and design work in collaboration with the staff. 
-                                                <a class="nav-link" style="text-align: center;" href="https://www.figma.com/proto/QvBNNJKUlDgA0ydQWewTmE/Companion?node-id=210%3A1664&scaling=scale-down" target="_blank">Give it a try</a>
-                                            </p>                                
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="grid-item">
-                                <div class="ratio ratio-4x3 image-container">
-                                    <div class="image">
-                                        <div class="position-absolute bottom-0 start-50 translate-middle-x align-middle w-100">
-                                            <h4 class="align-middle"> Catbot </h3>
-                                        </div>
-                                        <img class="img-fluid" src="images/Catbot_screenshot.jpg" style="height: 100%;">
-                                    </div>
-                                    <div class="middle">
-                                        <div class="card-text">   
-                                            <h3> Catbot </h3>
-                                            <span>
-                                                Unity | C#
-                                            </span>
-                                            <p>
-                                                A small Unity project created for the course Computer Graphics and Interaction to learn about transformations, animation hierarchies, and raycasting.
-                                                <a class="nav-link" style="text-align: center;" href="https://people.kth.se/~porsbjer/dh2323/" target="_blank">Check it out</a>
-                                            </p>                                 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="grid-item">
-                                <div class="ratio ratio-4x3 image-container">
-                                    <div class="image">
-                                        <div class="position-absolute bottom-0 start-50 translate-middle-x align-middle w-100">
-                                            <h4 class="align-middle"> Twitch extension </h3>
-                                        </div>
-                                        <img class="img-fluid" src="images/Twitch_screenshot.png" style="height: 100%;">
-                                    </div>
-                                    <div class="middle">
-                                        <div class="card-text">   
-                                            <h3> Twitch extension </h3>
-                                            <span>
-                                                HTML | CSS | JavaScript | Golang
-                                            </span>
-                                            <p>
-                                                A Twitch extension created for <a href="https://abiosgaming.com/" target="_blank" style="color: #f10028">Abios</a> using their eSports API.
-                                                In this project I primaraly worked with the frontend of the application, making sure that the data form the API was correctly
-                                                fetched and displayed.
-                                            </p>                                
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="parallax" style="background-image: linear-gradient(rgba(86, 0, 156, 0.445), rgba(0, 122, 85, 0.26)), url(images/Camera_RICOH.JPG);"></div>
-
-                </div>
-
-                <div id="photography" class="container-xl">
-                    <h2> Photography </h2>
-
                     <div class="row">
-                        <div class="col">
-                            <p style="text-align: center;">
-                                Here is a selection of my favorite photos I have taken. Shooting and 
-                                finding new and interesting compositions is so much fun.
+                        <div class="col-lg-4">
+                            <img class="portrait rounded-circle mx-auto d-block" src="images/Anton_Porsbjer.jpg">
+                        </div>
+                        <div class="col-lg-8 about-text pt-3">
+                            <h4 class="mb-0 fw-normal">Anton Porsbjer</h4>
+                            <p class="lead fs-5">
+                                MSc Computer Science Student @ KTH Royal Institute of Technology.
+                            </p> 
+                            <p class="fs-6 lh-sm">
+                                My name is Anton Porsbjer and I am a computer science and engineering student at 
+                                KTH Royal Institute of Technology from Stockholm, Sweden.
+                                I have a great passion for computer graphics programming, video game development, 
+                                creating interactive experiences and web applications. Reasontly i have also found 
+                                an interest in computer vision and a bit of machine learning.
+                                I am currently pursuing my master's degree in computer science with a specialization 
+                                in computer graphics and interaction.
+                                <br>
+                                <br>
+                                <p class="fs-2 text-center">
+                                    <a class="fs-2 fab fa-github" href="https://github.com/antonporsbjer" target="_blank" style="color: black;"></a>
+                                    |
+                                    <a class="fs-2 fab fa-linkedin" href="https://se.linkedin.com/in/anton-porsbjer" target="_blank" style="color: black;"></a>
+                                    |
+                                    <a class="fs-2 fas fa-envelope" href="mailto:porsbjer@kth.se" target="_blank" style="color: black;"></a>
+                                </p>
                             </p>
                         </div>
                     </div>
+                </div>
+                    
+                <div class="parallax" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.76)), url(images/keyboard1.JPG);"></div>
+               
+                <div id="projects" class="container-xl mb-5">
+                    <h2 class="text-center">Projects</h2>
+                    <p class="text-center lead pt-0 mx-5">
+                        Here is a selection of the projects that I have been working on throughout my studies.
+                    </p>
+
+                    <div class="row">
+                        <div class="col-xl-6 mb-4">
+                            <div class="card">
+                                <img src="images/Sabel_Tiny_screenshot.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-0">Sabel and Tiny</h5>
+                                    <p class="lead text-danger fs-5">
+                                        Unity | C#
+                                    </p>
+                                    <p class="card-text">
+                                        Sabel and Tiny is a 2D side scroller puzzle platform game. We created it as a part of a course in
+                                        game design in which we went through the process of creating games, from idea to 
+                                        specification to prototyping and pitching the game. The prototype was made using the Unity 
+                                        game engine. For this project, I assumed the role of project lead and was responsible for 
+                                        keeping track of all aspects of the game, making sure everything is working correctly
+                                        together and that the game is playable. I was also responsible for implementing some of the
+                                        game mechanics, one example is a mechanic where the player is able to control the the game world similar to a sliding puzzle.
+                                        <a class="nav-link" style="text-align: center;" href="https://sabeltiny.github.io/" target="_blank">The game's website</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6  mb-4">
+                            <div class="card">
+                                <img src="images/EitS_screenshot.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-0">
+                                        Eye in the Sky
+                                    </h5>
+                                    <p class="lead text-danger fs-5">
+                                        Unity | C# | Mirror
+                                    </p>
+                                    <p class="card-text">
+                                        Eye in the Sky is an asymmetric network multiplayer cross-platform game built in the Unity 
+                                        game engine. The goal of the project was creating a game using different type of technologies such as motion 
+                                        controls, asymmetric gameplay and we also experimented with AR.
+                                        In this project my responsibilites were gameplay programming, implementing the network 
+                                        connectivity between clients and the server, and android development.
+                                        <a class="nav-link" style="text-align: center;" href="https://adelinaand.github.io/EyeInTheSky" target="_blank">The game's website</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-6 mb-4">
+                            <div class="card">
+                                <img src="images/Jelly_screenshot.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-0">
+                                        Bunny's Blobbers
+                                    </h5>
+                                    <p class="lead text-danger fs-5">
+                                        Unity | C# | NVIDIA FleX
+                                    </p>
+                                    <p class="card-text">
+                                        As part of a course in models and simulation, we created a game using the Unity game engine and 
+                                        the NVIDIA FleX SDK. The game itself is pretty simple, you are a bunny trying to catch small bunnies made of 
+                                        jelly and other fun materials in your bucket. The goal of the project was to use NVIDIA FleX to learn about 
+                                        simulating the physics and behaviors of different materials.
+                                        <a class="nav-link" style="text-align: center;" href="https://people.kth.se/~porsbjer/JellyBlobbers/" target="_blank">Check out the devlog</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6  mb-4">
+                            <div class="card">
+                                <img src="images/OTM_screenshot.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-0">
+                                        Overwatch Tournament Manager
+                                    </h5>
+                                    <p class="lead text-danger fs-5">
+                                        Vue.js | HTML | CSS | JavaScript
+                                    </p>
+                                    <p class="card-text">
+                                        Overwatch Tournament Manager is a web application for creating Overwatch tournaments, 
+                                        created in Vue.js using an unofficial Overwatch API.
+                                        I worked with creating vue-components for the different aspects of the application and API calls.
+                                        I also spent some time on CSS styling.
+                                        <a class="nav-link" style="text-align: center;" href="https://overwatch-tournament-manager.firebaseapp.com" target="_blank">Try it out</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-xl-6 mb-4">
+                            <div class="card">
+                                <img src="images/Parklife_screenshot.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-0">
+                                        Parklife STHLM
+                                    </h5>
+                                    <p class="lead text-danger fs-5">
+                                        Figma
+                                    </p>
+                                    <p class="card-text">
+                                        Parklife STHLM is a prototype of a smartphone application for finding and learning about parks and green areas in Stockholm created using the design and prototyping tool Figma.
+                                        <a class="nav-link" style="text-align: center;" href="https://www.youtube.com/watch?v=K-IuHGTXG5Y" target="_blank">See a video</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6  mb-4">
+                            <div class="card">
+                                <img src="images/Cat_screenshot.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-0">
+                                        Cat shelter companion application
+                                    </h5>
+                                    <p class="lead text-danger fs-5">
+                                        Figma
+                                    </p>
+                                    <p class="card-text">
+                                        A prototype of a tablet application for use in cat shelters, designed in Figma as a UX project.
+                                                In this project we traveled to cat shelters in Stockholm and performed user studies and design work in collaboration with the staff. 
+                                                <a class="nav-link" style="text-align: center;" href="https://www.figma.com/proto/QvBNNJKUlDgA0ydQWewTmE/Companion?node-id=210%3A1664&scaling=scale-down" target="_blank">Give it a try</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-xl-6 mb-4">
+                            <div class="card">
+                                <img src="images/Catbot_screenshot.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-0">
+                                        Catbot
+                                    </h5>
+                                    <p class="lead text-danger fs-5">
+                                        Unity | C#
+                                    </p>
+                                    <p class="card-text">
+                                        A small Unity project created for the course Computer Graphics and Interaction to learn about transformations, animation hierarchies, and raycasting.
+                                        <a class="nav-link" style="text-align: center;" href="https://people.kth.se/~porsbjer/dh2323/" target="_blank">Check it out</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6  mb-4">
+                            <div class="card">
+                                <img src="images/Twitch_screenshot.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-0">
+                                        Twitch extension
+                                    </h5>
+                                    <p class="lead text-danger fs-5">
+                                        HTML | CSS | JavaScript | Golang
+                                    </p>
+                                    <p class="card-text">
+                                        A Twitch extension created for <a href="https://abiosgaming.com/" target="_blank" style="color: #f10028">Abios</a> using their eSports API.
+                                        In this project I primaraly worked with the frontend of the application, making sure that the data form the API was correctly
+                                        fetched and displayed.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="parallax" style="background-image: linear-gradient(rgba(86, 0, 156, 0.445), rgba(0, 122, 85, 0.26)), url(images/Camera_RICOH.JPG);"></div>
+
+                
+
+                <div id="photography" class="container-xl">
+                    <h2 class="text-center mb-0"> Photography </h2>
+                    <p class="text-center lead pt-0 mx-5">
+                        Here is a selection of my favorite photos I have taken. Shooting and 
+                        finding new and interesting compositions is so much fun.
+                    </p>
 
                     <!--Grid row-->
                     <div class="row">
