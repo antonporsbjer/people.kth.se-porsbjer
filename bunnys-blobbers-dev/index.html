@@ -1,0 +1,604 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Bunny's Blobbers Blog</title>
+  <meta name="description" content="Jelly Blobbers Project">
+  <meta name="author" content="Anton Porsbjer">
+    
+  <!-- Stylesheets -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css?v=1.0">
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <h2 style="color: orange;">Bunny's Blobbers</h2>
+            </div>
+
+            <div class="left" style="background-color:#1a1a1a;"></div>
+            <div class="middle" style="background-color:#bbbbbb;">
+
+                <div class="blogentry" style="background-color:#ddd;">
+                    <div class="image">
+
+                        <!-- Bootstrap: Carousel -->
+                        <div id="carouselControls12" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Images/game.png" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text"></p></div>
+                                </div>
+                            <a class="carousel-control-prev" href="#carouselControls12" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselControls12" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="texts">
+                        <p><b>Bunny's Blobbers</b></p>
+                        <p>The game is finished for now! We are decently happy with the outcome. There are some things we didn't get the time to implement,
+                            and we had to remove the UI because something strange happened to it. <a href="https://youtu.be/Lq3GKEeUbdU" target="_blank">Here is a gameplay video!</a>
+                        </p> 
+                    </div>
+                </div>
+
+                <div class="blogentry" style="background-color:#ddd;">
+                    <div class="image">
+
+                        <!-- Bootstrap: Carousel -->
+                        <div id="carouselControls11" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Images/clouds.png" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text"></p></div>
+                                </div>
+                            <a class="carousel-control-prev" href="#carouselControls11" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselControls11" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="texts">
+                        <p><b>Clouds as obstacles</b></p>
+                        <p>We thought that the pegs as obstacles didn't really fit thematically to the game (they were just floating in the air) so instead 
+                            of pegs we decided to add clouds. Solid clouds! That the blobbers will collide with. :) We found some free nice low poly clouds 
+                            that we have added to the game level. We have been working on getting everything to work with the clouds. We ran into some problems
+                            with the blobbers that use NVIDIA FleX again. When the blobbers collide with the clouds they might bounce in any direction.
+                            But we don't want the blobbers to move in Z-direction because then it's impossible to catch them. This was an easy fix for the 
+                            non-FleX blobbers, we just locked their movement in Z-direction. But if we did this to the FleX-blobbers they stopped working.
+                            What we did was that we made the hitboxes of the clouds cylinder shaped and really long in Z-direction. This solves the problem
+                            most of the time but not completely, but it seems to work good enough! This means that the cloud hitboxes don't match the 
+                            cloud models completely, but they are kind of soft on the edges and hard on the inside, it looks okay and it does the job!
+                            We made spawners and scripts for the clouds, so they will spawn and move across the screen, two at a time in opposite direction 
+                            at random intervals and random speeds.
+                        </p> 
+                    </div>
+                </div>
+
+                <div class="blogentry" style="background-color:#ddd;">
+                    <div class="image">
+
+                        <!-- Bootstrap: Carousel -->
+                        <div id="carouselControls10" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Images/newmaterials.png" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text">New materials, colors, lighting, background</p></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Images/obstacles.png" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text">Pegs as obstacles</p></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Images/catcheffect.gif" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text">Catch particle effect</p></div>
+                                </div>
+                            <a class="carousel-control-prev" href="#carouselControls10" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselControls10" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="texts">
+                        <p><b>It's starting to come together</b></p>
+                        <p>Jenna has made textures and materials for the bunny and dress (which we decided to keep even though the cloth simulation didn't work out..),
+                            added a background image, tweaked the lighting, tweaked the blobber materials (mainly gave them new colors) and added 
+                            a particle effect for when the player catches a blobber.
+                            <br><br>
+                            Anton has implemented score counting and a basic UI. He has also been working on adding some kind of obstacles to the level. 
+                            We realized that if the player catches all the blobbers, they will not see the simulations.. So we want to add some obstacles like 
+                            pegs or something to make the blobbers collide with these first before reaching the bucket or the ground. We came up with all kinds 
+                            of ideas for these obstacles, some of them could be like rotating stars, some of them could create a little explosion when a blobber hits them,
+                            adding a force to the blobber. But these will have to be stretch goals, the most important thing is that we get some kind of obstacles there.
+
+                        </p> 
+                    </div>
+                </div>
+
+                <div class="blogentry" style="background-color:#ddd;">
+                    <div class="image">
+
+                        <!-- Bootstrap: Carousel -->
+                        <div id="carouselControls09" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Images/cloth.gif" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text">Jelly blobbers</p></div>
+                                </div>
+                            <a class="carousel-control-prev" href="#carouselControls09" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselControls09" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="texts">
+                        <p><b>Soft body bunny ears and cloth bunny dress</b></p>
+                        <p>We have worked on implementing the bunny's ears as soft bodies and creating some clothing for it to try out the NVIDIA FleX cloth actor.
+                            To make the bunny's ear soft body we first had to make the ears separate 3D models. Then we used the ear models to make a soft body actor 
+                            with NVIDIA FleX. Then we just placed the ear objects under the head bone of the bunny's rig and locked the particles at the bottom of the 
+                            ears to make them stay in place. And this actually worked as we thought it would! However, the ears were very wobbly which weren't 
+                            how we had imagined them. We tried to tweak the settings of the soft body and lock some more particles but that didn't help much. 
+                            It's quite amusing but at least one of us is sceptical about keeping these ears for the final version of the game.. :)
+                            <br><br>
+                            We have also tried to use the same technique but with a cloth actor on a dress that Jenna added to the bunny model. But this proved
+                            to be harder than we thought... It kind of almost works, but for some reason the dress gets a little bit rotated when starting the game,
+                            even though we have lined up everything perfectly in t-pose. Of course, the bunny also rotates in its idle and moving animations,
+                            but we would think that the dress would just follow and not rotate strangely? Anyway there is a bigger problem. The collisions are 
+                            probably not updating fast enough which makes the dress clip through the bunny when moving fast. It's frustrating because it looks like 
+                            it could work and it looks quite cool when not moving too fast and if the dress wouldn't rotate strangely.
+                            We were thinking about doing some simpler clothing like a bow or cape instead, but we'll see if we will have time for that.
+                            
+                        </p> 
+                    </div>
+                </div>
+
+                <div class="blogentry" style="background-color:#ddd;">
+                    <div class="image">
+
+                        <!-- Bootstrap: Carousel -->
+                        <div id="carouselControls08" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Images/trigger.png" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text"></p></div>
+                                </div>
+                            <a class="carousel-control-prev" href="#carouselControls08" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselControls08" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="texts">
+                        <p><b>Blobber despawn bug</b></p>
+                        <p>We encountered a bug that happened quite frequently when playing the game that would make the game crash. It took quite some time before 
+                            we were able to pin down the problem, we had to peel away everything in the game until we only had two blobbers left and we could recreate the bug. 
+                            We have a script that deletes the blobbers from the scene a while after they have hit the ground.
+                            What happened was that if a blobber is being deleted and another blobber using NVIDIA FleX is still colliding with it, the game would crash.
+                            To solve this we added code to one of the scripts that counts the number of FleX-blobbers that are close to the blobber that is about 
+                            to be deleted (using triggers), and if it is close to a FleX-blobber it will wait a while and then check again, and only delete
+                            if there are no FleX-blobbers near it. 
+                            <br><br>
+                            We also had some troubles implementing the triggers for catching blobbers and colliding with the ground. Normally we would want to
+                            have a trigger in the bucket that registers, for example, a catch if a blobber collides with it. But because of NVIDIA FleX we 
+                            can't get the tag of the blobbers when they enter a trigger, so we don't know what kind of blobber was caught. Instead we had to
+                            add a trigger as a child to each blobber and have that trigger keep track of the collisions instead. These seems like quite
+                            unnecessary work-arounds but we have searched the documentation of NVIDIA FleX and haven't found anything that would help.
+                        </p> 
+                    </div>
+                </div>
+
+                <div class="blogentry" style="background-color:#ddd;">
+                    <div class="image">
+
+                        <!-- Bootstrap: Carousel -->
+                        <div id="carouselControls08" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Images/glass.gif" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text"></p></div>
+                                </div>
+                            <a class="carousel-control-prev" href="#carouselControls08" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselControls08" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="texts">
+                        <p><b>Glass simulation</b></p>
+                        <p>Glass blobber
+                            For the glass blobbers we didn't use NVIDIA FleX but just Uniy's built in physics system and tweaked the settings.
+                            When working with this one we learned something interesting! We could get the glass blobber to look heavy and hard 
+                            by itself, without modifying the mass. But when the glass blobber collided with a balloon blobber it would bounce off 
+                            the balloon and fly away. But that's not how glass would interact with a balloon! The balloon should be pushed away by the glass.
+                            So it was important to make sure the glass blobber is heavier (mass) than the balloon blobber.
+                        </p> 
+                    </div>
+                </div>
+
+                <div class="blogentry" style="background-color:#ddd;">
+                    <div class="image">
+
+                        <!-- Bootstrap: Carousel -->
+                        <div id="carouselControls07" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Images/styrofoam.gif" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text"></p></div>
+                                </div>
+                            <a class="carousel-control-prev" href="#carouselControls07" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselControls07" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="texts">
+                        <p><b>Styrofoam simulation</b></p>
+                        <p>It was a bit tricky to create the styrofoam simulation.. Maybe because we weren't completely clear on what we were aiming for. 
+                            We didn't have any styrofoam to study in the same way as the balloon, and we weren't sure if styrofoam should be a little bouncy or not.
+                            For the styrofoam blobbers we used NVIDIA FleX solid actor and tried to tweak the settings to make them look very lightweight.
+                        </p> 
+                    </div>
+                </div>
+
+                <div class="blogentry" style="background-color:#ddd;">
+                    <div class="image">
+
+                        <!-- Bootstrap: Carousel -->
+                        <div id="carouselControls06" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Images/balloon.gif" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text"></p></div>
+                                </div>
+                            <a class="carousel-control-prev" href="#carouselControls06" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselControls06" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="texts">
+                        <p><b>Balloon simulation</b></p>
+                        <p>It was really interesting to implement the balloon blobber physics. At first we just tried to make the balloons light 
+                            and bounce against the ground. We created a bouncy physics material on the ground to achieve the bouncing. But 
+                            balloons going in a straight line towards the ground didn't feel right. Luckily we had balloons at hand that we could study!
+                            So we looked at a real balloon and tried to think about how to mimic its movements. It kind of moves randomly and doesn't bounce that much.
+                            We figured out that wind/air resistance is what makes the balloon really move like a balloon, so we need to simulate that.
+                            We wrote a script that makes the balloon blobber spin around itself and also move a little bit randomly left or right. 
+                            And now we are quite satisfied with the balloon blobbers! We think they look ballony enough!
+                        </p> 
+                    </div>
+                </div>
+
+                <div class="blogentry" style="background-color:#ddd;">
+                    <div class="image">
+
+                        <!-- Bootstrap: Carousel -->
+                        <div id="carouselControls05" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Images/jelly.gif" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text"></p></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Images/funnybug.gif" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text"></p></div>
+                                </div>
+                            <a class="carousel-control-prev" href="#carouselControls05" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselControls05" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="texts">
+                        <p><b>Jelly simulation</b></p>
+                        <p>We have started working on the simulations! First off are the jelly blobbers. These were easy to create using 
+                            NVIDIA FleX but the result is so satisfying, they are so wobbly! We used the soft body feature of NVIDIA FleX.
+                            The second gif in the image reel to the left is a funny bug we got when a jelly blobber got stuck.
+                        </p> 
+                    </div>
+                </div>
+
+                <div class="blogentry" style="background-color:#ddd;">
+                    <div class="image">
+
+                        <!-- Bootstrap: Carousel -->
+                        <div id="carouselControls04" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Images/bunny.png" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text">Bunny character</p></div>
+                                </div>
+                            <a class="carousel-control-prev" href="#carouselControls04" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselControls04" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="texts">
+                        <p><b>Bunny and despawning and catching blobbers</b></p>
+                        <p>Jenna has created a 3D model, materials, rig and animations for the bunny character with the bucket and 
+                            Anton has implemented scripts for despawning blobbers after they have hit the ground and catching blobbers in the bucket. 
+                        </p> 
+                    </div>
+                </div>
+
+                <div class="blogentry" style="background-color:#ddd;">
+                    <div class="image">
+
+                        <!-- Bootstrap: Carousel -->
+                        <div id="carouselControls03" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Images/githubboard.jpg" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text"></p></div>
+                                </div>
+                            <a class="carousel-control-prev" href="#carouselControls03" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselControls03" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="texts">
+                        <p><b>Project board</b></p>
+                        <p><a href="Images/githubboard.jpg" target="_blank">Here</a> is an image showing our project board on GitHub. We have tried to think about everything we need to implement and created issues 
+                            with different tags: Simulation, 3D graphics, 2D graphics, Level design, VFX, Gameplay and UI. We have divided all the issues in three 
+                            levels of priority, high, medium and low priority / stretch goals. We think this setup will be useful when working on the project.
+                        </p> 
+                    </div>
+                </div>
+
+                <div class="blogentry" style="background-color:#ddd;">
+                    <div class="image">
+
+                        <!-- Bootstrap: Carousel -->
+                        <div id="carouselControls02" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Images/blobbers2.png" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text"> (1) Blobber models with materials</p></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Images/spawner.gif" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text">(2) Blobber spawner</p></div>
+                                </div>
+                            <a class="carousel-control-prev" href="#carouselControls02" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselControls02" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="texts">
+                        <p><b>First models and scripts</b></p>
+                        <p>Jenna has created 3D models for the bucket and the blobbers, and materials for the blobbers (borrowing some free to use shaders and textures) (image 1 to the left). 
+                            I sent the image of the blobbers to my family and asked what materials they think they look like, here are some of the answers (from left to right):
+                            <br>(Balloon) - glossy fabric that pillows might have
+                            <br>(Jelly) - shiny Christmas tree ball material / glass
+                            <br>(Styrofoam) - fine concrete or stone / styrofoam (!)
+                            <br>(Glass) - silk fabric as in a Lucia headband
+                            <br>
+                            Making the materials look right was evidently not that easy! Hopefully the simulations of the behavior of the materials will make them more recognizable.<br><br>                             
+                            Anton has implemented basic movement for the character, a spawner for the blobbers (image 2) and set up the main scene.  
+                        </p> 
+                    </div>
+                </div>
+
+                <div class="blogentry" style="background-color:#ddd;">
+                    <div class="image">
+
+                        <!-- Bootstrap: Carousel -->
+                        <div id="carouselControls01" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Images/sketch1.png" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text">Sketch for Jelly Blobbers game</p></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Images/sketch2.png" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text">Blobbers of different materials</p></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Images/tetris.jpg" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text">Inspiration soft body tetris</p></div>
+                                </div>
+                            <a class="carousel-control-prev" href="#carouselControls01" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselControls01" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="texts">
+                        <p><b>A change of direction!</b></p>
+                        <p>When searching for different ways to implement soft body simulations we found <a href="https://youtu.be/TNAKv1dkYyQ" target="_blank">this video</a> where
+                            they use a plugin for Unity called NVIDIA FleX to create soft body tetris blocks. We were so inspired by the shiny wobbly tetris blocks so we want to 
+                            try out the NVIDIA FleX plugin! Since just making some soft body cubes using an existing framework seems too trivial we have decided to give the 
+                            simulations a purpose in a game. We came up with the idea of a simple game where the player will catch jelly candies in a bucket. Then we 
+                            built on this idea and, to create a bit of a challenge for us regarding simulations, there will be objects (that we call blobbers) of different materials that the players will catch.
+                            We tried to think of a number of different materials that have distinct properties and so far we have decided on jelly, glass, styrofoam, balloon and water balloon.
+                             The focus of the project will be to create simulations for these different materials and use them in a game, and game design will be secondary.
+                             The are some sketches for the game in the image reel to the left.
+                            
+                        </p> 
+                    </div>
+                </div>
+
+                <div class="blogentry" style="background-color:#ddd;">
+                    <div class="image">
+
+                        <!-- Bootstrap: Carousel -->
+                        <div id="carouselControls00" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Images/blobbers1.gif" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text"></p></div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="Images/gummybears.gif" class="d-block w-100" alt="...">
+                                    <div class="carousel-caption d-none d-md-block"><p class="img-text">Gummy bears</p></div>
+                                </div>
+                            <a class="carousel-control-prev" href="#carouselControls00" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselControls00" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="texts">
+                        <p><b>Trying a different approach</b></p>
+                        <p>We have implemented a first version of a jelly simulation by following a tutorial and tried it out on some basic shapes.
+                            They are not quite behaving as we want though so we will have to do some tweaking to see if we can get it to work out.
+                            As seen in the gif, the sphere is wobbling nicely while the cylinder seems quite stiff.
+                            Jenna made a gummy bear 3D model and tried the jelly simulation on those too.
+                        </p> 
+                    </div>
+                </div>
+
+                <div class="blogentry" style="background-color:#ddd;">
+                    <div class="image">
+
+                        <!-- Bootstrap: Carousel -->
+                        <div id="carouselControls00" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Images/Cube_mesh.gif" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="texts">
+                        <p><b>Generating and manipulating a cube mesh from vertices.</b></p>
+                        <p> We have started exploring the possibility of manipulating a cube mesh using a spring-damper system. 
+                            Today we have managed to create a cube mesh using a Vector3 array of vertices and an integer array of 
+                            points describing triangles (polygons). Since in Unity every vertex in a cube (8 vertices) consists of 
+                            3 points (one for each face-normal), we had to find which three points correspond to which indexes in 
+                            the vertex array. Last but not least, we also tried manipulating one of two of the cubes vertices using 
+                            a sinus function updating both the cube mesh and the mesh-collider to see if it worked as we intended.
+                            Which it did! 🎉
+                        </p> 
+                    </div>
+                </div>
+
+                <div class="blogentry" style="background-color:#ddd;">
+                    <div class="image">
+
+                        <!-- Bootstrap: Carousel -->
+                        <div id="carouselControls00" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="Images/orange-jelly-cubes.jpg" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="texts">
+                        <p><b>Jell-O!</b></p>
+                        <p>We will hopefully simulate some fancy bouncy jelly cubes. We are quite worried to say the least.</p> 
+                    </div>
+                </div>
+
+        </div>
+        <div class="right"  style="background-color:#1a1a1a;"></div>
+
+        <div class="footer" style="background-color:#2a2a2a;">
+            <p style="color: orange; margin: 0px;">Anton Porsbjer & Jenna Smulter</p>
+            <p style="color: orange; margin: 0px;">porsbjer@kth.se | smulter@kth.se</p>
+        </div>
+    </div>    
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
