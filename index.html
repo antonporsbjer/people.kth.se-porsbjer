@@ -3,388 +3,231 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Anton Porsbjer</title>
 
         <!-- Style -->
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <!-- <link href="https://www.w3schools.com/w3css/4/w3.css"> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
         <link rel="stylesheet" href="style.css">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-
         <script src="https://kit.fontawesome.com/1a02f27ba0.js" crossorigin="anonymous"></script>
 
         <!-- Scripts -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script> -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
     </head>
 
     <body>
-        <div id="splash-screen" class="h-100 bg-secondary">
-            <div class="row">
-                <div class="col position-absolute top-0 start-50 translate-middle-x mt-3">
-                    <h1>Anton Porsbjer</h1>
+        <section class="hero">
+            <div class="hero-body">
+                <p class="title">
+                Anton Porsbjer
+                </p>
+                <p class="subtitle">
+                Software Engineer and game developer
+                </p>
+            </div>
+        </section>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <!--<img src="" width="112" height="28">-->
+                </a>
+            
+                <a id="burgerMenuIcon" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="toggleBurgerMenu()">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+          
+            <div id="myNavbar" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="#aboutMe">
+                        <i class="fas fa-info-circle" aria-hidden="true"></i>
+                        <span>
+                            About Me
+                        </span>
+                    </a>
+            
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link" href="#projects">
+                            <i class="fas fa-code-branch" aria-hidden="true"></i> 
+                            <span>
+                                Projects
+                            </span>
+                        </a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="#games">
+                                Games
+                            </a>
+                            <a class="navbar-item" href="#ux">
+                                UX
+                            </a>
+                            <a class="navbar-item" href="#other">
+                                Other
+                            </a>
+                        </div>
+                    </div>
+
+                    <a class="navbar-item" href="#photography">
+                        <i class="fas fa-camera-retro" aria-hidden="true"></i> 
+                        <span>
+                            Photography
+                        </span>
+                    </a>
                 </div>
-            </div>    
-            <div id="welcome-text" class="row">
-                <div class="col">
-                    <p class="lead position-absolute top-50 start-50 translate-middle lh-sm">
-                        Welcome to my personal website. 
-                        I created this website to show a bit of who I am and what I have created while studying at KTH.
-                        <br>
-                        <br>
-                        <br>
-                        <a class="nav-link" href="#about"><i class="far fa-arrow-alt-circle-down"></i></a>
-                    </p>
+            
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="field is-grouped">
+                            <a class="bd-navbar-icon navbar-item" href="https://twitter.com/jgthms" target="_blank">
+                                <span class="icon" style="color: #24292f;">
+                                   <i class="fab fa-lg fa-github"></i>
+                                </span>
+                            </a>
+                            <a class="bd-navbar-icon navbar-item" href="https://twitter.com/jgthms" target="_blank">
+                                <span class="icon" style="color: #0a66c2;">
+                                   <i class="fab fa-lg fa-linkedin"></i>
+                                </span>
+                            </a>
+                            <a class="bd-navbar-icon navbar-item" href="https://twitter.com/jgthms" target="_blank">
+                                <span class="icon" style="color: #55acee;">
+                                   <i class="fab fa-lg fa-twitter"></i>
+                                </span>
+                            </a>
+                            <a class="bd-navbar-icon navbar-item" href="https://twitter.com/jgthms" target="_blank">
+                                <span class="icon" style="color: #6d4aff;">
+                                   <i class="fas fa-lg fa-envelope"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div id="socials" class="col position-absolute bottom-0 start-50 translate-middle-x socials">
-                    <p style="color: rgb(255, 0, 45);">    
-                        <a class="fab fa-github" href="https://github.com/antonporsbjer" target="_blank"></a>
-                        |
-                        <a class="fab fa-linkedin" href="https://se.linkedin.com/in/anton-porsbjer" target="_blank"></a>
-                        |
-                        <a class="fas fa-envelope" href="mailto:porsbjer@kth.se" target="_blank"></a>
-                    </p>
+        </nav>
+
+        <section id="aboutMe" class="section">
+            <div class="container">
+                <h1 class="title has-text-centered">
+                    About Me
+                </h1>
+                <div class="columns">
+                    <div class="column">
+                        <figure class="image m-auto">
+                            <img class="is-rounded" src="images/Anton_Porsbjer.jpg">
+                        </figure>
+                    </div>
+                    <div class="column is-two-thirds">
+                        <p class="subtitle">
+                            <strong>Anton Porsbjer</strong> 
+                            <br>
+                            M.Sc.Eng Computer Science Student @ KTH Royal Institute of Technology. 
+                        </p>
+                        <p>
+                            My name is Anton Porsbjer and I am a computer science and engineering 
+                            student at KTH Royal Institute of Technology from Stockholm, Sweden. 
+                            I have a great passion for computer graphics programming, video game development, 
+                            creating interactive experiences and web applications. Reasontly i have also 
+                            found an interest in computer vision and a bit of machine learning. 
+                            I am currently pursuing my master's degree in computer science with a 
+                            specialization in computer graphics and interaction. 
+                        </p>
+                        <p class="title has-text-centered">
+                            <a href="https://github.com/antonporsbjer">
+                                <span class="icon mx-1" style="color: #24292f;">
+                                    <i class="fab fa-github"></i>
+                                </span>
+                            </a>
+                            <a href="https://linkedin.com/in/anton-porsbjer?trk=people-guest_people_search-card">
+                                <span class="icon mx-1" style="color: #0a66c2;">
+                                    <i class="fab fa-linkedin"></i>
+                                </span>
+                            </a>
+                            <a href="https://twitter.com/toolkitcheetah">
+                                <span class="icon mx-1" style="color: #55acee;">
+                                    <i class="fab fa-twitter"></i>
+                                </span>
+                            </a>
+                            <a href="mailto:porsbjer@kth.se">
+                                <span class="icon mx-1" style="color: #6d4aff;">
+                                    <i class="fas fa-envelope"></i></a>
+                                </span>
+                            </a>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <main>
-            <div>
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-                    <div class="container-fluid">
-                        <button class="menu-btn navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="menu-icon"><i class=" fas fa-bars"></i></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <span class="navbar-text me-auto mb-2 mb-lg-0"></span>
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#about"> <i class="fas fa-info-circle"></i> About me</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#projects"> <i class="fas fa-code-branch"></i> Projects</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#photography"> <i class="fas fa-camera-retro"></i> Photography</a>
-                                </li>
-                            </ul>
-                            <span class="navbar-text me-auto mb-2 mb-lg-0"></span>
-                        </div>
-                    </div>
-                </nav> 
-                
-                <div id="about" class="container-xl" style="min-height: 600px;">                    
-                    <h2 class="text-center mb-0"> About Me </h2>
-                    <p class="text-center lead pt-0 mx-5">
-                        A small introduction about my self.
+        <section id="projects" class="section">
+            <div class="container">
+                <h1 class="title has-text-centered">
+                    Projects
+                </h1>
+                <p class="subtitle has-text-centered">
+                    Here is a selection of the projects that I have been working on throughout my studies. 
+                </p>
+                <section id="games">
+                    <p class="is-size-4 has-text-centered">
+                        <strong>Games</h2></strong>
                     </p>
-                    
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <img class="portrait rounded-circle mx-auto d-block" src="images/Anton_Porsbjer.jpg">
-                        </div>
-                        <div class="col-lg-8 pt-3">
-                            <h4 class="mb-0 fw-normal">Anton Porsbjer</h4>
-                            <p class="lead fs-5">
-                                MSc Computer Science Student @ KTH Royal Institute of Technology.
-                            </p> 
-                            <p class="fs-6 lh-sm">
-                                My name is Anton Porsbjer and I am a computer science and engineering student at 
-                                KTH Royal Institute of Technology from Stockholm, Sweden.
-                                I have a great passion for computer graphics programming, video game development, 
-                                creating interactive experiences and web applications. Reasontly i have also found 
-                                an interest in computer vision and a bit of machine learning.
-                                I am currently pursuing my master's degree in computer science with a specialization 
-                                in computer graphics and interaction.
-                                <br>
-                                <br>
-                                <p class="fs-2 text-center">
-                                    <a class="fs-2 fab fa-github" href="https://github.com/antonporsbjer" target="_blank" style="color: black;"></a>
-                                    |
-                                    <a class="fs-2 fab fa-linkedin" href="https://se.linkedin.com/in/anton-porsbjer" target="_blank" style="color: black;"></a>
-                                    |
-                                    <a class="fs-2 fas fa-envelope" href="mailto:porsbjer@kth.se" target="_blank" style="color: black;"></a>
-                                </p>
-                            </p>
+                    <div class="columns">
+                        <div class="column">
                         </div>
                     </div>
-                </div>
-                    
-                <div class="parallax" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.76)), url(images/keyboard1.JPG);"></div>
-               
-                <div id="projects" class="container-xl mb-5">
-                    <h2 class="text-center">Projects</h2>
-                    <p class="text-center lead pt-0 mx-5">
-                        Here is a selection of the projects that I have been working on throughout my studies.
+                </section>
+                <section id="ux">
+                    <p class="is-size-4 has-text-centered">
+                        <strong>UX</h2></strong>
                     </p>
-
-                    <div class="row">
-                        <div class="col-xl-6 mb-4">
-                            <div class="card bg-dark text-light">
-                                <img src="images/RTIOW_progress.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-0">Raytracing</h5>
-                                    <p class="lead text-danger fs-5">
-                                        C++
-                                    </p>
-                                    <p class="card-text">
-                                        I built a raytracer following the gudence of the book "Ray Tracing in One Weekend" by Peter Shirley 
-                                        in order to get a better understanding of raytracing and the ideas behind it. In this project i 
-                                        learned alot about the basics of raytracing, the math and physics behind modeling light transport 
-                                        with reflections, and refractions of different materials.
-                                        <a class="nav-link" style="text-align: center;" href="https://github.com/antonporsbjer/RayTracingInOneWeekend" target="_blank">Check out the repo</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-6 mb-4">
-                            <div class="card bg-dark text-light">
-                                <img src="images/Sabel_Tiny_screenshot.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-0">Sabel and Tiny</h5>
-                                    <p class="lead text-danger fs-5">
-                                        Unity | C#
-                                    </p>
-                                    <p class="card-text">
-                                        Sabel and Tiny is a 2D side scroller puzzle platform game. We created it as a part of a course in
-                                        game design in which we went through the process of creating games, from idea to 
-                                        specification to prototyping and pitching the game. The prototype was made using the Unity 
-                                        game engine. For this project, I assumed the role of project lead and was responsible for 
-                                        keeping track of all aspects of the game, making sure everything is working correctly
-                                        together and that the game is playable. I was also responsible for implementing some of the
-                                        game mechanics, one example is a mechanic where the player is able to control the the game world similar to a sliding puzzle.
-                                        <a class="nav-link" style="text-align: center;" href="https://sabeltiny.github.io/" target="_blank">The game's website</a>
-                                    </p>
-                                </div>
-                            </div>
+                    <div class="columns">
+                        <div class="column">
                         </div>
                     </div>
-
-                    <div class="row">
-                        <div class="col-xl-6  mb-4">
-                            <div class="card bg-dark text-light">
-                                <img src="images/EitS_screenshot.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-0">
-                                        Eye in the Sky
-                                    </h5>
-                                    <p class="lead text-danger fs-5">
-                                        Unity | C# | Mirror
-                                    </p>
-                                    <p class="card-text">
-                                        Eye in the Sky is an asymmetric network multiplayer cross-platform game built in the Unity 
-                                        game engine. The goal of the project was creating a game using different type of technologies such as motion 
-                                        controls, asymmetric gameplay and we also experimented with AR.
-                                        In this project my responsibilites were gameplay programming, implementing the network 
-                                        connectivity between clients and the server, and android development.
-                                        <a class="nav-link" style="text-align: center;" href="https://adelinaand.github.io/EyeInTheSky" target="_blank">The game's website</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-6 mb-4">
-                            <div class="card bg-dark text-light">
-                                <img src="images/Jelly_screenshot.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-0">
-                                        Bunny's Blobbers
-                                    </h5>
-                                    <p class="lead text-danger fs-5">
-                                        Unity | C# | NVIDIA FleX
-                                    </p>
-                                    <p class="card-text">
-                                        As part of a course in models and simulation, we created a game using the Unity game engine and 
-                                        the NVIDIA FleX SDK. The game itself is pretty simple, you are a bunny trying to catch small bunnies made of 
-                                        jelly and other fun materials in your bucket. The goal of the project was to use NVIDIA FleX to learn about 
-                                        simulating the physics and behaviors of different materials.
-                                        <a class="nav-link" style="text-align: center;" href="https://people.kth.se/~porsbjer/bunnys-blobbers-dev/" target="_blank">Check out the devlog</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-                        
-                        <div class="col-xl-6  mb-4">
-                            <div class="card bg-dark text-light">
-                                <img src="images/OTM_screenshot.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-0">
-                                        Overwatch Tournament Manager
-                                    </h5>
-                                    <p class="lead text-danger fs-5">
-                                        Vue.js | HTML | CSS | JavaScript
-                                    </p>
-                                    <p class="card-text">
-                                        Overwatch Tournament Manager is a web application for creating Overwatch tournaments, 
-                                        created in Vue.js using an unofficial Overwatch API.
-                                        I worked with creating vue-components for the different aspects of the application and API calls.
-                                        I also spent some time on CSS styling.
-                                        <a class="nav-link" style="text-align: center;" href="https://overwatch-tournament-manager.firebaseapp.com" target="_blank">Try it out</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-6 mb-4">
-                            <div class="card bg-dark text-light">
-                                <img src="images/Parklife_screenshot.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-0">
-                                        Parklife STHLM
-                                    </h5>
-                                    <p class="lead text-danger fs-5">
-                                        Figma
-                                    </p>
-                                    <p class="card-text">
-                                        Parklife STHLM is a prototype of a smartphone application for finding and learning about parks and green areas in Stockholm created using the design and prototyping tool Figma.
-                                        <a class="nav-link" style="text-align: center;" href="https://www.youtube.com/watch?v=K-IuHGTXG5Y" target="_blank">See a video</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="row">
-                        
-
-                        <div class="col-xl-6  mb-4">
-                            <div class="card bg-dark text-light">
-                                <img src="images/Cat_screenshot.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-0">
-                                        Cat shelter companion application
-                                    </h5>
-                                    <p class="lead text-danger fs-5">
-                                        Figma
-                                    </p>
-                                    <p class="card-text">
-                                        A prototype of a tablet application for use in cat shelters, designed in Figma as a UX project.
-                                        In this project we traveled to cat shelters in Stockholm and performed user studies and design work in collaboration with the staff. 
-                                        <a class="nav-link" style="text-align: center;" href="https://www.figma.com/proto/QvBNNJKUlDgA0ydQWewTmE/Companion?node-id=210%3A1664&scaling=scale-down" target="_blank">Give it a try</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-6 mb-4">
-                            <div class="card bg-dark text-light">
-                                <img src="images/Catbot_screenshot.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-0">
-                                        Catbot
-                                    </h5>
-                                    <p class="lead text-danger fs-5">
-                                        Unity | C#
-                                    </p>
-                                    <p class="card-text">
-                                        A small Unity project created for the course Computer Graphics and Interaction to learn about transformations, animation hierarchies, and raycasting.
-                                        <a class="nav-link" style="text-align: center;" href="https://people.kth.se/~porsbjer/dh2323/" target="_blank">Check it out</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                    <div class="row">
-                        
-                        <div class="col-xl-6  mb-4">
-                            <div class="card bg-dark text-light">
-                                <img src="images/Twitch_screenshot.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title mb-0">
-                                        Twitch extension
-                                    </h5>
-                                    <p class="lead text-danger fs-5">
-                                        HTML | CSS | JavaScript | Golang
-                                    </p>
-                                    <p class="card-text">
-                                        A Twitch extension created for <a href="https://abiosgaming.com/" target="_blank" style="color: #f10028">Abios</a> using their eSports API.
-                                        In this project I primaraly worked with the frontend of the application, making sure that the data form the API was correctly
-                                        fetched and displayed.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="parallax" style="background-image: linear-gradient(rgba(86, 0, 156, 0.445), rgba(0, 122, 85, 0.26)), url(images/Camera_RICOH.JPG);"></div>
-
-                
-
-                <div id="photography" class="container-xl">
-                    <h2 class="text-center mb-0"> Photography </h2>
-                    <p class="text-center lead pt-0 mx-5">
-                        Here is a selection of my favorite photos I have taken. Shooting and 
-                        finding new and interesting compositions is so much fun.
+                </section>
+                <section id="other">
+                    <p class="is-size-4 has-text-centered">
+                        <strong>Other</h2></strong>
                     </p>
-
-                    <!--Grid row-->
-                    <div class="row">
-
-                        <!--Grid column-->
-                        <div class="col-lg-4 col-md-12 mb-4">
-                
-                        <img src="images/img_portfolio/wheat.JPG" class="img-fluid mb-4" alt="">
-                
-                        <img src="images/img_portfolio/woods.JPG" class="img-fluid mb-4" alt=""
-                            data-wow-delay="0.3s">
-                
+                    <div class="columns">
+                        <div class="column">
                         </div>
-                        <!--Grid column-->
-                
-                        <!--Grid column-->
-                        <div class="col-lg-4 col-md-6 mb-4">
-                
-                        <img src="images/img_portfolio/kvall.JPG" class="img-fluid mb-4" alt=""
-                            data-wow-delay="0.1s">
-                
-                        <img src="images/img_portfolio/skarblad.JPG" class="img-fluid mb-4" alt=""
-                            data-wow-delay="0.4s">
-                
-                        </div>
-                        <!--Grid column-->
-                
-                        <!--Grid column-->
-                        <div class="col-lg-4 col-md-6 mb-4">
-                
-                        <img src="images/img_portfolio/drops.JPG" class="img-fluid mb-4" alt=""
-                            data-wow-delay="0.2s">
-                
-                        <img src="images/img_portfolio/halm.JPG" class="img-fluid mb-4" alt=""
-                            data-wow-delay="0.5s">
-                
-                        </div>
-                        <!--Grid column-->
-                
                     </div>
-                    <!--Grid row-->
-                </div>
-
+                </section>
             </div>
-        </main>
+        </section>
 
-        <footer id="foot">
-            <div class="parallax" style="background-image: url(images/keyboard2.JPG); min-height: 50px;">
-                <div class="container pt-3 pb-3">
-                    <p style="text-align: center; color: #ff0000be; margin: 0;">Anton Porsbjer | <a class="" style="color: #ff0000be;" href="https://www.kth.se/en/gemensamt/disclaimer/disclaimer-for-personliga-webbsidor-1.62633" target="_blank">Disclaimer</a></p>
+        <section id="photography" class="section">
+            <div class="container">
+                <h1 class="title has-text-centered">
+                    Photography
+                </h1>
+                <p class="subtitle has-text-centered">
+                    Here is a selection of my favorite photos I have taken. 
+                    Shooting and finding new and interesting compositions is so much fun. 
+                </p>
+                <div class="columns">
+                    <div class="column">
+
+                    </div>
                 </div>
             </div>
-        </footer>
+        </section>
+
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Website</strong> by <a href="https://linkedin.com/in/anton-porsbjer?trk=people-guest_people_search-card">Anton Porsbjer</a>. 
+                    <br>
+                    The source code can be found <a href="https://github.com/antonporsbjer/people.kth.se-porsbjer">here</a> and is licensed under the <a href="http://opensource.org/licenses/mit-license.php">MIT</a> license, but the content (text, images, and videos) are my own and should not be redistributed.
+                    <br>
+                    This is a personal website for more information please see the <a href="https://www.kth.se/en/gemensamt/disclaimer/disclaimer-for-personliga-webbsidor-1.62633" target="_blank">disclaimer</a>.
+
+                </p>
+            </div>
+          </footer>
     </body>
 </html>
