@@ -19,33 +19,59 @@
         <script src="index.js"></script>
     </head>
 
-    <body>
-        <section class="hero">
+    <body class="has-navbar-fixed-top">
+<!-- Navigation -->
+<!--
+        <nav class="navbar is-fixed-top hero has-background-primary-light">
             <div class="hero-body">
-                <p class="title">
-                Anton Porsbjer
-                </p>
-                <p class="subtitle">
-                Software Engineer and game developer
-                </p>
-            </div>
-        </section>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="#">
-                    <!--<img src="" width="112" height="28">-->
+                <a class="" href="#">
+                    <p class="title has-text-primary-dark">
+                        Anton Porsbjer
+                    </p>
+                    <p class="subtitle has-text-primary-dark">
+                        Software Engineer and Game Developer
+                    </p>
                 </a>
-            
+
                 <a id="burgerMenuIcon" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="toggleBurgerMenu()">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
             </div>
-          
-            <div id="myNavbar" class="navbar-menu">
-                <div class="navbar-start">
-                    <a class="navbar-item" href="#aboutMe">
+        </nav>
+-->
+
+        <nav class="navbar is-fixed-top has-background-primary-light has-text-primary-dark" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand is-hidden-desktop">
+                <a class="navbar-item" href="#">
+                    <p class="subtitle has-text-primary-dark">
+                        Anton Porsbjer
+                    </p>
+                    <!--<img src="" width="112" height="28">-->
+                </a>
+
+                <a id="burgerMenuIcon" role="button" class="navbar-burger has-text-primary-dark" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" onclick="toggleBurgerMenu()">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            
+            <div class="navbar-brand hero-body is-hidden-touch">
+                <a class="has-text-primary-dark" href="#">
+                    <p class="title has-text-primary-dark">
+                        Anton Porsbjer
+                    </p>
+                    <p class="subtitle has-text-primary-dark">
+                        Software Engineer and Game Developer
+                    </p>
+                </a>
+            </div>
+     
+            <div id="myNavbar" class="navbar-menu has-background-primary-light has-text-primary-dark">
+                <div class="navbar-end">
+                    <a class="navbar-item has-text-primary-dark" href="#aboutMe">
                         <i class="fas fa-info-circle" aria-hidden="true"></i>
                         <span>
                             About Me
@@ -53,26 +79,26 @@
                     </a>
             
                     <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link" href="#projects">
+                        <a class="navbar-link has-text-primary-dark" href="#projects">
                             <i class="fas fa-code-branch" aria-hidden="true"></i> 
                             <span>
                                 Projects
                             </span>
                         </a>
                         <div class="navbar-dropdown">
-                            <a class="navbar-item" href="#games">
+                            <a class="navbar-item has-text-primary-dark" href="#games">
                                 Games
                             </a>
-                            <a class="navbar-item" href="#ux">
+                            <a class="navbar-item has-text-primary-dark" href="#ux">
                                 UX
                             </a>
-                            <a class="navbar-item" href="#other">
+                            <a class="navbar-item has-text-primary-dark" href="#other">
                                 Other
                             </a>
                         </div>
                     </div>
 
-                    <a class="navbar-item" href="#photography">
+                    <a class="navbar-item has-text-primary-dark" href="#photography">
                         <i class="fas fa-camera-retro" aria-hidden="true"></i> 
                         <span>
                             Photography
@@ -80,27 +106,27 @@
                     </a>
                 </div>
             
-                <div class="navbar-end">
+                <div class="navbar-start">
                     <div class="navbar-item">
                         <div class="field is-grouped">
                             <a class="bd-navbar-icon navbar-item" href="https://twitter.com/jgthms" target="_blank">
                                 <span class="icon" style="color: #24292f;">
-                                   <i class="fab fa-lg fa-github"></i>
+                                <i class="fab fa-lg fa-github"></i>
                                 </span>
                             </a>
                             <a class="bd-navbar-icon navbar-item" href="https://twitter.com/jgthms" target="_blank">
                                 <span class="icon" style="color: #0a66c2;">
-                                   <i class="fab fa-lg fa-linkedin"></i>
+                                <i class="fab fa-lg fa-linkedin"></i>
                                 </span>
                             </a>
                             <a class="bd-navbar-icon navbar-item" href="https://twitter.com/jgthms" target="_blank">
                                 <span class="icon" style="color: #55acee;">
-                                   <i class="fab fa-lg fa-twitter"></i>
+                                <i class="fab fa-lg fa-twitter"></i>
                                 </span>
                             </a>
                             <a class="bd-navbar-icon navbar-item" href="https://twitter.com/jgthms" target="_blank">
                                 <span class="icon" style="color: #6d4aff;">
-                                   <i class="fas fa-lg fa-envelope"></i>
+                                <i class="fas fa-lg fa-envelope"></i>
                                 </span>
                             </a>
                         </div>
@@ -109,114 +135,115 @@
             </div>
         </nav>
 
-        <section id="aboutMe" class="section">
-            <div class="container">
-                <h1 class="title has-text-centered">
-                    About Me
-                </h1>
-                <div class="columns">
-                    <div class="column">
-                        <figure class="image m-auto">
-                            <img class="is-rounded" src="images/Anton_Porsbjer.jpg">
-                        </figure>
-                    </div>
-                    <div class="column is-two-thirds">
-                        <p class="subtitle">
-                            <strong>Anton Porsbjer</strong> 
-                            <br>
-                            M.Sc.Eng Computer Science Student @ KTH Royal Institute of Technology. 
-                        </p>
-                        <p>
-                            My name is Anton Porsbjer and I am a computer science and engineering 
-                            student at KTH Royal Institute of Technology from Stockholm, Sweden. 
-                            I have a great passion for computer graphics programming, video game development, 
-                            creating interactive experiences and web applications. Reasontly i have also 
-                            found an interest in computer vision and a bit of machine learning. 
-                            I am currently pursuing my master's degree in computer science with a 
-                            specialization in computer graphics and interaction. 
-                        </p>
-                        <p class="title has-text-centered">
-                            <a href="https://github.com/antonporsbjer">
-                                <span class="icon mx-1" style="color: #24292f;">
-                                    <i class="fab fa-github"></i>
-                                </span>
-                            </a>
-                            <a href="https://linkedin.com/in/anton-porsbjer?trk=people-guest_people_search-card">
-                                <span class="icon mx-1" style="color: #0a66c2;">
-                                    <i class="fab fa-linkedin"></i>
-                                </span>
-                            </a>
-                            <a href="https://twitter.com/toolkitcheetah">
-                                <span class="icon mx-1" style="color: #55acee;">
-                                    <i class="fab fa-twitter"></i>
-                                </span>
-                            </a>
-                            <a href="mailto:porsbjer@kth.se">
-                                <span class="icon mx-1" style="color: #6d4aff;">
-                                    <i class="fas fa-envelope"></i></a>
-                                </span>
-                            </a>
-                        </p>
+        <main class="">
+            <section id="aboutMe" class="section is-medium">
+                <div class="container">
+                    <h1 class="title has-text-centered has-text-success">
+                        About Me
+                    </h1>
+                    <div class="columns">
+                        <div class="column">
+                            <figure class="image m-auto">
+                                <img class="is-rounded" src="images/Anton_Porsbjer.jpg">
+                            </figure>
+                        </div>
+                        <div class="column is-two-thirds">
+                            <p class="subtitle">
+                                <strong>Anton Porsbjer</strong> 
+                                <br>
+                                M.Sc.Eng Computer Science Student @ KTH Royal Institute of Technology. 
+                            </p>
+                            <p>
+                                My name is Anton Porsbjer and I am a computer science and engineering 
+                                student at KTH Royal Institute of Technology from Stockholm, Sweden. 
+                                I have a great passion for computer graphics programming, video game development, 
+                                creating interactive experiences and web applications. Reasontly i have also 
+                                found an interest in computer vision and a bit of machine learning. 
+                                I am currently pursuing my master's degree in computer science with a 
+                                specialization in computer graphics and interaction. 
+                            </p>
+                            <p class="title has-text-centered">
+                                <a href="https://github.com/antonporsbjer">
+                                    <span class="icon mx-1" style="color: #24292f;">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                </a>
+                                <a href="https://linkedin.com/in/anton-porsbjer?trk=people-guest_people_search-card">
+                                    <span class="icon mx-1" style="color: #0a66c2;">
+                                        <i class="fab fa-linkedin"></i>
+                                    </span>
+                                </a>
+                                <a href="https://twitter.com/toolkitcheetah">
+                                    <span class="icon mx-1" style="color: #55acee;">
+                                        <i class="fab fa-twitter"></i>
+                                    </span>
+                                </a>
+                                <a href="mailto:porsbjer@kth.se">
+                                    <span class="icon mx-1" style="color: #6d4aff;">
+                                        <i class="fas fa-envelope"></i></a>
+                                    </span>
+                                </a>
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="projects" class="section">
-            <div class="container">
-                <h1 class="title has-text-centered">
-                    Projects
-                </h1>
-                <p class="subtitle has-text-centered">
-                    Here is a selection of the projects that I have been working on throughout my studies. 
-                </p>
-                <section id="games">
-                    <p class="is-size-4 has-text-centered">
-                        <strong>Games</h2></strong>
+            <section id="projects" class="section is-medium">
+                <div class="container">
+                    <h1 class="title has-text-centered has-text-danger">
+                        Projects
+                    </h1>
+                    <p class="subtitle has-text-centered">
+                        Here is a selection of the projects that I have been working on throughout my studies. 
+                    </p>
+                    <section id="games">
+                        <p class="is-size-4 has-text-centered">
+                            <strong>Games</h2></strong>
+                        </p>
+                        <div class="columns">
+                            <div class="column">
+                            </div>
+                        </div>
+                    </section>
+                    <section id="ux">
+                        <p class="is-size-4 has-text-centered">
+                            <strong>UX</h2></strong>
+                        </p>
+                        <div class="columns">
+                            <div class="column">
+                            </div>
+                        </div>
+                    </section>
+                    <section id="other">
+                        <p class="is-size-4 has-text-centered">
+                            <strong>Other</h2></strong>
+                        </p>
+                        <div class="columns">
+                            <div class="column">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <section id="photography" class="section is-medium">
+                <div class="container">
+                    <h1 class="title has-text-centered has-text-success">
+                        Photography
+                    </h1>
+                    <p class="subtitle has-text-centered">
+                        Here is a selection of my favorite photos I have taken. 
+                        Shooting and finding new and interesting compositions is so much fun. 
                     </p>
                     <div class="columns">
                         <div class="column">
-                        </div>
-                    </div>
-                </section>
-                <section id="ux">
-                    <p class="is-size-4 has-text-centered">
-                        <strong>UX</h2></strong>
-                    </p>
-                    <div class="columns">
-                        <div class="column">
-                        </div>
-                    </div>
-                </section>
-                <section id="other">
-                    <p class="is-size-4 has-text-centered">
-                        <strong>Other</h2></strong>
-                    </p>
-                    <div class="columns">
-                        <div class="column">
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </section>
 
-        <section id="photography" class="section">
-            <div class="container">
-                <h1 class="title has-text-centered">
-                    Photography
-                </h1>
-                <p class="subtitle has-text-centered">
-                    Here is a selection of my favorite photos I have taken. 
-                    Shooting and finding new and interesting compositions is so much fun. 
-                </p>
-                <div class="columns">
-                    <div class="column">
-
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
+            </section>
+        </main>
         <footer class="footer">
             <div class="content has-text-centered">
                 <p>

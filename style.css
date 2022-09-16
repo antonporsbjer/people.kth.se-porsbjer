@@ -8,3 +8,23 @@ body {
 .image {
   max-width: 250px;
 }
+
+.hero-body {
+  padding: 1rem 2rem;
+}
+
+.navbar-link:not(.is-arrowless)::after {
+  border-color: #00947e
+}
+
+#aboutMe {
+  background-color: hsl(142, 52%, 96%);
+}
+
+#projects {
+  /* background-color: hsl(48, 100%, 96%); */
+}
+
+#photography {
+  background-color: hsl(142, 52%, 96%)
+}
