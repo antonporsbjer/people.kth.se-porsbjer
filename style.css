@@ -9,12 +9,58 @@ body {
   max-width: 250px;
 }
 
-.hero-body {
+.hero-body-nav {
   padding: 1rem 2rem;
 }
 
 .navbar-link:not(.is-arrowless)::after {
   border-color: #00947e
+}
+
+.subsection {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.subsection h1 {
+  padding: 20px;
+}
+
+.parallax {
+  /* Set a specific height */
+  min-height: 350px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  box-shadow: 
+    inset 0px 11px 8px -10px rgba(0, 0, 0, 0.5),
+    inset 0px -11px 8px -10px rgba(0, 0, 0, 0.5); 
+}
+
+.text-blur {
+  backdrop-filter: blur(20px);
+  background: rgba(0,0,0,0.5);
+  padding: 15px;
+}
+
+.navbar {
+  box-shadow: 0px -59px 29px 50px rgba(0, 0, 0, 0.384);
+}
+
+
+/* Solid border */
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+
+/* Rounded border */
+hr.rounded {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
 }
 
 #aboutMe {
@@ -23,6 +69,62 @@ body {
 
 #projects {
   /* background-color: hsl(48, 100%, 96%); */
+}
+
+#raytracing {
+  background-image: url(images/RTIOW_progress.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#sableTiny {
+  background-image: url(images/Sabel_Tiny_screenshot.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#eyeSky {
+  background-image: url(images/EitS_screenshot.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#bunny {
+  background-image: url(images/Jelly_screenshot.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#otm {
+  background-image: url(images/OTM_screenshot.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#parklife {
+  background-image: url(images/Parklife_screenshot.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#catShelter {
+  background-image: url(images/Cat_screenshot.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+#abiosTwitch {
+  background-image: url(images/Twitch_screenshot.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 #photography {

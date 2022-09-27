@@ -58,7 +58,7 @@
                 </a>
             </div>
             
-            <div class="navbar-brand hero-body is-hidden-touch">
+            <div class="navbar-brand hero-body hero-body-nav is-hidden-touch">
                 <a class="has-text-primary-dark" href="#">
                     <p class="title has-text-primary-dark">
                         Anton Porsbjer
@@ -189,6 +189,8 @@
                 </div>
             </section>
 
+            <div class="parallax" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.76)), url(images/keyboard1.JPG);"></div>
+
             <section id="projects" class="section is-medium">
                 <div class="container">
                     <h1 class="title has-text-centered has-text-danger">
@@ -197,35 +199,200 @@
                     <p class="subtitle has-text-centered">
                         Here is a selection of the projects that I have been working on throughout my studies. 
                     </p>
-                    <section id="games">
-                        <p class="is-size-4 has-text-centered">
+                    <section id="games" class="subsection">
+                        <h1 class="is-size-4 has-text-centered">
                             <strong>Games</h2></strong>
-                        </p>
-                        <div class="columns">
-                            <div class="column">
+                        </h1>
+                        <section id="eyeSky" class="hero is-danger is-halfheight my-5">
+                            <div class="hero-body">
+                                <div class="text-blur">
+                                    <p class="title">
+                                        Eye in the Sky
+                                    </p>
+                                    <p class="subtitle has-text-danger">
+                                        Unity | C# | Mirror
+                                    </p>
+                                    <p>
+                                        Eye in the Sky is an asymmetric network multiplayer cross-platform game built in the Unity 
+                                        game engine. The goal of the project was creating a game using different type of technologies such as motion 
+                                        controls, asymmetric gameplay and we also experimented with AR.
+                                        In this project my responsibilites were gameplay programming, implementing the network 
+                                        connectivity between clients and the server, and android development.
+                                    </p>
+                                    <br>
+                                    <a class="has-text-danger-light" href="https://adelinaand.github.io/EyeInTheSky" target="_blank">The game's website</a>
+                                </div>
                             </div>
-                        </div>
-                    </section>
-                    <section id="ux">
-                        <p class="is-size-4 has-text-centered">
-                            <strong>UX</h2></strong>
-                        </p>
-                        <div class="columns">
-                            <div class="column">
+                        </section>
+
+                        <section id="sableTiny" class="hero is-danger is-halfheight my-5">
+                            <div class="hero-body">
+                                <div class="text-blur">
+                                    <p class="title">
+                                        Sabel and Tiny
+                                    </p>
+                                    <p class="subtitle has-text-danger">
+                                        Unity | C#
+                                    </p>
+                                    <p>
+                                        Sabel and Tiny is a 2D side scroller puzzle platform game. We created it as a part of a course in
+                                        game design in which we went through the process of creating games, from idea to 
+                                        specification to prototyping and pitching the game. The prototype was made using the Unity 
+                                        game engine. For this project, I assumed the role of project lead and was responsible for 
+                                        keeping track of all aspects of the game, making sure everything is working correctly
+                                        together and that the game is playable. I was also responsible for implementing some of the
+                                        game mechanics, one example is a mechanic where the player is able to control 
+                                        the the game world similar to a sliding puzzle.
+                                    </p>
+                                    <br>
+                                    <a class="has-text-danger-light" href="https://sabeltiny.github.io/" target="_blank">The game's website</a>
+                                </div>
                             </div>
-                        </div>
+                        </section>
+
+                        <section id="bunny" class="hero is-danger is-halfheight my-5">
+                            <div class="hero-body">
+                                <div class="text-blur">
+                                    <p class="title">
+                                        Bunny's Blobbers
+                                    </p>
+                                    <p class="subtitle has-text-danger">
+                                        Unity | C# | NVIDIA FleX
+                                    </p>
+                                    <p>
+                                        As part of a course in models and simulation, we created a game using the Unity game engine and 
+                                        the NVIDIA FleX SDK. The game itself is pretty simple, you are a bunny trying to catch small bunnies made of 
+                                        jelly and other fun materials in your bucket. The goal of the project was to use NVIDIA FleX to learn about 
+                                        simulating the physics and behaviors of different materials.
+                                    </p>
+                                    <br>
+                                    <a class="has-text-danger-light" href="https://people.kth.se/~porsbjer/bunnys-blobbers-dev/" target="_blank">Check out the devlog</a>                                </div>
+                            </div>
+                        </section>
+
                     </section>
-                    <section id="other">
-                        <p class="is-size-4 has-text-centered">
+
+                    <section id="ux" class="subsection">
+                        <h1 class="is-size-4 has-text-centered">
+                            <strong>Web Development and UX</strong>
+                        </h1>
+                        
+                        <section id="otm" class="hero is-danger is-halfheight my-5">
+                            <div class="hero-body">
+                                <div class="text-blur">
+                                    <p class="title">
+                                        Overwatch Tournament Manager
+                                    </p>
+                                    <p class="subtitle has-text-danger">
+                                        Vue.js | HTML | CSS | JavaScript
+                                    </p>
+                                    <p>
+                                        Overwatch Tournament Manager is a web application for creating Overwatch tournaments, 
+                                        created in Vue.js using an unofficial Overwatch API.
+                                        I worked with creating vue-components for the different aspects of the application and API calls.
+                                        I also spent some time on CSS styling.
+                                    </p>
+                                    <br>
+                                    <a class="has-text-danger-light"  href="https://overwatch-tournament-manager.firebaseapp.com" target="_blank">Try it</a>                            
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="abiosTwitch" class="hero is-danger is-halfheight my-5">
+                            <div class="hero-body">
+                                <div class="text-blur">
+                                    <p class="title">
+                                        Twitch extension
+                                    </p>
+                                    <p class="subtitle has-text-danger">
+                                        HTML | CSS | JavaScript | Golang
+                                    </p>
+                                    <p>
+                                        A Twitch extension created for Abios using their eSports API.
+                                        In this project I primaraly worked with the frontend of the application, making sure that the data form the API was correctly
+                                        fetched and displayed.
+                                    </p>
+                                    <br>
+                                    <a class="has-text-danger-light" href="https://abiosgaming.com/" target="_blank">Abios</a>                               
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="catShelter" class="hero is-danger is-halfheight my-5">
+                            <div class="hero-body">
+                                <div class="text-blur">
+                                    <p class="title">
+                                        Cat shelter companion application
+                                    </p>
+                                    <p class="subtitle has-text-danger">
+                                        Figma
+                                    </p>
+                                    <p>
+                                        A prototype of a tablet application for use in cat shelters, designed in Figma as a UX project.
+                                        In this project we traveled to cat shelters in Stockholm and performed user studies and design 
+                                        work in collaboration with the staff.
+                                    </p>
+                                    <br>
+                                    <a class="has-text-danger-light"  href="https://www.figma.com/proto/QvBNNJKUlDgA0ydQWewTmE/Companion?node-id=210%3A1664&scaling=scale-down" target="_blank">Give it a try</a>                                
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="parklife" class="hero is-danger is-halfheight my-5">
+                            <div class="hero-body">
+                                <div class="text-blur">
+                                    <p class="title">
+                                        Parklife STHLM
+                                    </p>
+                                    <p class="subtitle has-text-danger">
+                                        Figma
+                                    </p>
+                                    <p>
+                                        Parklife STHLM is a prototype of a smartphone application for finding and 
+                                        learning about parks and green areas in Stockholm created using the 
+                                        design and prototyping tool Figma.
+                                    </p>
+                                    <br>
+                                    <a class="has-text-danger-light"  href="https://www.youtube.com/watch?v=K-IuHGTXG5Y" target="_blank">See a video</a>                                
+                                </div>
+                            </div>
+                        </section>
+
+                    </section>
+
+                    <section id="other" class="subsection">
+                        <h1 class="is-size-4 has-text-centered">
                             <strong>Other</h2></strong>
-                        </p>
-                        <div class="columns">
-                            <div class="column">
+                        </h1>
+
+                        <section id="raytracing" class="hero is-success is-halfheight my-5">
+                            <div class="hero-body">
+                                <div class="text-blur">
+                                    <p class="title">
+                                        Raytracing
+                                    </p>
+                                    <p class="subtitle has-text-danger">
+                                        C++ 
+                                    </p>
+                                    <p class="">
+                                        I built a raytracer following the gudence of the book "Ray Tracing in One Weekend" 
+                                        by Peter Shirley in order to get a better understanding of raytracing and the 
+                                        ideas behind it. In this project i learned alot about the basics of raytracing, 
+                                        the math and physics behind modeling light transport with reflections, 
+                                        and refractions of different materials. 
+                                    </p>
+                                    <br>
+                                    <a class="has-text-danger-light"  href="https://github.com/antonporsbjer/RayTracingInOneWeekend" target="_blank">Check out the repo</a>
+                                </div>
                             </div>
-                        </div>
+                        </section>
+
                     </section>
+
                 </div>
             </section>
+
+            <div class="parallax" style="background-image: linear-gradient(rgba(86, 0, 156, 0.445), rgba(0, 122, 85, 0.26)), url(images/Camera_RICOH.JPG);"></div>
 
             <section id="photography" class="section is-medium">
                 <div class="container">
